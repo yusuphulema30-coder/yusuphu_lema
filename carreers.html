@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        
+        <!-- Viewport for mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO & Social Meta Tags -->
+        <meta name="description" content="Join Lemanyx Intelligence - Careers in AI Engineering, Frontend Development, and Product Operations.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="image/Lemanyx_logo.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+        
+        <!-- Page-Specific Styles - MOBILE FIRST -->
+        <style>
+            /* ============================================================
+               CAREERS PAGE - MOBILE FIRST DESIGN
+               ============================================================ */
+
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: 0 var(--spacing-md);
+            }
+
+            /* Hero Section */
+            .hero {
+                padding: var(--spacing-lg) var(--spacing-md);
+                text-align: center;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .hero h1 {
+                font-size: clamp(1.5rem, 5vw, 3rem);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .hero p {
+                margin-bottom: var(--spacing-lg);
+                line-height: 1.6;
+            }
+
+            /* Button styling in hero */
+            #button-hero {
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                transition: all var(--transition-speed) ease;
+                display: inline-block;
+                margin: var(--spacing-md) 0;
+            }
+
+            #button-hero:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+            }
+
+            #button-hero:active {
+                transform: translateY(-1px);
+            }
+
+            /* Location badge */
+            .hero span {
+                display: block;
+                font-size: 0.95rem;
+                color: var(--color-text-dim);
+                margin-top: var(--spacing-md);
+            }
+
+            /* Why Work Here Section */
+            .why-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin-bottom: var(--spacing-xxl);
+            }
+
+            /* Open Opportunities Section */
+            .opp-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin-bottom: var(--spacing-xxl);
+            }
+
+            /* Section headings */
+            section h2 {
+                text-align: center;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            /* Application Form */
+            #form-box {
+                background: rgba(0, 212, 255, 0.05);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius);
+                border: 1px solid var(--color-border-subtle);
+                margin-top: var(--spacing-xxl);
+                display: none;
+            }
+
+            #form-box h2 {
+                margin-bottom: var(--spacing-lg);
+            }
+
+            #form-box form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            /* Form buttons container */
+            .form-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-md);
+                margin-top: var(--spacing-lg);
+            }
+
+            .form-btn,
+            #close-btn {
+                padding: var(--spacing-md) var(--spacing-lg);
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                transition: all var(--transition-speed) ease;
+                width: 100%;
+            }
+
+            .form-btn {
+                background: linear-gradient(135deg, #2d7a2d, #1f5c1f);
+                color: var(--color-text-white);
+            }
+
+            .form-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(45, 122, 45, 0.4);
+            }
+
+            #close-btn {
+                background: rgba(97, 95, 95, 0.5);
+                color: var(--color-text-white);
+            }
+
+            #close-btn:hover {
+                background: rgba(97, 95, 95, 0.7);
+            }
+
+            /* TABLET (768px and up) */
+            @media (min-width: 768px) {
+                main {
+                    padding: 0 var(--spacing-lg);
+                }
+
+                .hero {
+                    padding: var(--spacing-xl) var(--spacing-lg);
+                }
+
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                /* Why Work Here - 2 columns on tablet */
+                .why-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                /* Open Opportunities - 2 columns on tablet */
+                .opp-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .form-buttons {
+                    flex-direction: row;
+                }
+
+                .form-btn,
+                #close-btn {
+                    flex: 1;
+                }
+            }
+
+            /* DESKTOP (1024px and up) */
+            @media (min-width: 1024px) {
+                .hero {
+                    padding: var(--spacing-xxl) var(--spacing-lg);
+                }
+
+                /* Why Work Here - 3 columns on desktop */
+                .why-container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                /* Open Opportunities - 3 columns on desktop */
+                .opp-container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                #form-box {
+                    padding: var(--spacing-xl);
+                }
+
+                #form-box form {
+                    max-width: 700px;
+                }
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | Careers</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="image/Lemanyx logo.png" width="40px" height="40px" style="border-radius: 25px;">
+                        <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="https://www.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="carreers.html" class="present-nav-place" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="contact.html" data-translate="nav-contact">Contact Us</a></li>
+                        <li><a href="request_demo.html" class="request-box" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <!-- Hamburger Menu (Mobile) -->
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+        </header>
+
+ 
+        <main>
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <h1 data-translate="careers-hero-title">Build the Architecture of Advanced Intelligence</h1>
+                <p data-translate="careers-hero-subtitle">Join Lemanyx Intelligence in designing AI systems that improve healthcare, visual perception, and intelligent automation.</p>
+                <button id="button-hero">Apply Now</button>
+                <span data-translate="careers-location">📍 Dar es Salaam, Tanzania</span>
+            </section>
+
+            <!-- WHY WORK HERE SECTION -->
+            <section>
+                <h2 data-translate="careers-why-work">Why Work Here?</h2>
+                <div class="why-container">
+                    <article class="card">
+                        <span class="material-symbols-outlined">track_changes</span>
+                        <h3 data-translate="careers-precision-title">Precision</h3>
+                        <p data-translate="careers-precision-desc">Engineer systems with measurable accuracy and technical excellence.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="material-symbols-outlined">Favorite</span>
+                        <h3 data-translate="careers-impact-title">Human Impact</h3>
+                        <p data-translate="careers-impact-desc">Technology that improves real lives and solves meaningful problems.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="material-symbols-outlined">Rocketlaunch</span>
+                        <h3 data-translate="careers-learn-title">Learn Fast</h3>
+                        <p data-translate="careers-learn-desc">Build in public and ship quickly with a supportive team.</p>
+                    </article>
+                </div>    
+            </section>
+
+            <!-- OPEN OPPORTUNITIES SECTION -->
+            <section>
+                <h2 data-translate="careers-opportunities">Open Opportunities</h2>
+                <div class="opp-container">
+                    <!-- AI Engineering Intern -->
+                    <article class="card">
+                        <span class="material-symbols-outlined">psychology</span>
+                        <h3 data-translate="careers-ai-intern-title">AI Engineering Intern</h3>
+                        <p><strong data-translate="careers-ai-intern-skills">Skills: Python • APIs • AI workflows</strong></p>
+                        <p class="text-muted" data-translate="careers-ai-intern-schedule">Schedule: Part-time • 3 months</p>
+                    </article>
+
+                    <!-- Frontend Developer -->
+                    <article class="card">
+                        <span class="material-symbols-outlined">code</span>
+                        <h3 data-translate="careers-frontend-title">Frontend Developer (Junior)</h3>
+                        <p><strong data-translate="careers-frontend-skills">Skills: UI • Accessibility • Performance</strong></p>
+                        <p class="text-muted" data-translate="careers-frontend-required">Required: Portfolio</p>
+                    </article>
+
+                    <!-- Product & Operations -->
+                    <article class="card">
+                        <span class="material-symbols-outlined">business_center</span>
+                        <h3 data-translate="careers-product-title">Product & Operations Associate</h3>
+                        <p><strong data-translate="careers-product-skills">Skills: Research • Documentation • Coordination</strong></p>
+                        <p class="text-muted" data-translate="careers-product-schedule">Schedule: Flexible hours</p>
+                    </article>
+                </div>
+            </section>
+
+<!-- APPLICATION FORM (Hidden by default) -->
+<section id="form-box" hidden>
+    <h2 data-translate="careers-form-title">Application Form</h2>
+    
+    <!-- ADD THIS ID to the form tag -->
+    <form id="careersForm">
+        <!-- Full Name -->
+        <div class="label">
+            <label for="fullname" data-translate="form-fullname-label">Full Name</label>
+            <input type="text" id="fullname" required data-translate="form-fullname-placeholder" placeholder="Yusuphu Awadhi Lema">
+        </div>
+
+        <!-- Email Address -->
+        <div class="label">
+            <label for="email" data-translate="form-email-label">Email Address</label>
+            <input type="email" id="email" required data-translate="form-email-placeholder" placeholder="name@example.com">
+        </div>
+
+        <!-- Role Selection -->
+        <div class="label">
+            <label for="role" data-translate="form-role-label">Role applying for</label>
+            <select id="role" required>
+                <option value="" data-translate="form-role-select">-- Select a role --</option>
+                <option value="AI Engineering Intern" data-translate="form-role-ai">AI Engineering Intern</option>
+                <option value="Frontend Developer" data-translate="form-role-frontend">Frontend Developer (Junior)</option>
+                <option value="Product & Operations Associate" data-translate="form-role-product">Product & Operations Associate</option>
+            </select>
+        </div>
+
+        <!-- Portfolio/GitHub -->
+        <div class="label">
+            <label for="portfolio" data-translate="form-portfolio-label">Portfolio / GitHub URL</label>
+            <input type="url" id="portfolio" required data-translate="form-portfolio-placeholder" placeholder="https://github.com/username">
+        </div>
+
+        <!-- Why Join -->
+        <div class="label">
+            <label for="motivation" data-translate="form-motivation-label">Why do you want to join Lemanyx?</label>
+            <textarea id="motivation" required data-translate="form-motivation-placeholder" placeholder="Tell us why you want to join our team..."></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-buttons">
+            <button type="submit" class="form-btn" data-translate="form-submit-btn">Submit Application</button>
+            <button type="button" id="close-btn" data-translate="form-close-btn">Close</button>
+        </div>
+    </form>
+</section>
+            </section>
+        </main>
+
+  
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● BY YUSUPHU LEMA</p>
+        </footer>
+
+
+        <!-- Translation System -->
+        <script src="javaScript/translations.js"></script>
+        <script src="javaScript/language-toggle.js"></script>
+        
+        <!-- Form Validation -->
+        <script src="javaScript/form-validation.js"></script>
+        
+        <!-- Career Page Specific -->
+        <!-- Hamburger Menu Handler -->
+         <script src="javaScript/translations.js"></script>
+         <script src="javaScript/language-toggle.js"></script>
+         <script src="javaScript/index.js"></script>
+         <script src="javaScript/form_validation.js"></script>
+        <script src="javaScript/hamburger-menu.js"></script>
+    </body>
+</html>

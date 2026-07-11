@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        
+        <!-- Viewport for mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO & Social Meta Tags -->
+        <meta name="description" content="About Lemanyx Intelligence - Learn our mission to solve Tanzanian problems through advanced technology, strategic thinking, and professional leadership.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="image/Lemanyx_logo.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Page-Specific Styles - MOBILE FIRST -->
+        <style>
+            /* ============================================================================
+               ABOUT PAGE - MOBILE FIRST DESIGN
+               ============================================================================ */
+
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: 0 var(--spacing-md);
+            }
+
+            /* Section styling - mobile first */
+            .section {
+                padding: var(--spacing-lg) 0;
+                margin-bottom: var(--spacing-lg);
+                border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            }
+
+            .section:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            /* Section headings */
+            .section h2 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .section h3 {
+                color: var(--color-text-white);
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-sm);
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+            }
+
+            /* Paragraph styling */
+            .section p {
+                margin-bottom: var(--spacing-md);
+                line-height: 1.8;
+                color: var(--color-text-muted);
+            }
+
+            /* Strong text emphasis */
+            .section strong {
+                color: var(--color-accent-cyan);
+            }
+
+            /* Italic text */
+            .section em {
+                color: var(--color-text-dim);
+            }
+
+            /* List styling */
+            .section ul {
+                margin-left: var(--spacing-lg);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .section li {
+                margin-bottom: var(--spacing-md);
+                line-height: 1.8;
+                color: var(--color-text-muted);
+                list-style: disc;
+            }
+
+            .section li strong {
+                color: var(--color-accent-cyan);
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            /* Executive Summary - special styling */
+            .executive-summary {
+                background: rgba(0, 212, 255, 0.05);
+                border-left: 4px solid var(--color-accent-cyan);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .executive-summary p {
+                margin-bottom: var(--spacing-md);
+            }
+
+            .executive-summary p:first-child {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--color-accent-cyan);
+            }
+
+            /* Three Pillars Box */
+            .three-pillars {
+                background: rgba(0, 212, 255, 0.05);
+                border: 1px solid rgba(0, 212, 255, 0.2);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin: var(--spacing-lg) 0;
+            }
+
+            .three-pillars p {
+                font-weight: 600;
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .three-pillars ul {
+                margin-left: var(--spacing-md);
+            }
+
+            .three-pillars li {
+                font-size: 1rem;
+                margin-bottom: var(--spacing-md);
+            }
+
+            /* Values Grid - mobile first */
+            .values-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin-top: var(--spacing-lg);
+            }
+
+            .value-item {
+                background: rgba(0, 212, 255, 0.05);
+                border-left: 4px solid var(--color-accent-cyan);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+            }
+
+            .value-item h4 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-sm);
+                font-weight: 600;
+            }
+
+            .value-item p {
+                margin-bottom: 0;
+            }
+
+            /* CEO Commitment Box */
+            .ceo-box {
+                background: rgba(0, 212, 255, 0.05);
+                border: 1px solid rgba(0, 212, 255, 0.2);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin-top: var(--spacing-lg);
+            }
+
+            .ceo-box ul {
+                margin-left: var(--spacing-md);
+            }
+
+            .ceo-box li {
+                margin-bottom: var(--spacing-md);
+            }
+
+            /* TABLET (768px and up) - RESPONSIVE */
+            @media (min-width: 768px) {
+                main {
+                    padding: 0 var(--spacing-lg);
+                }
+
+                .section {
+                    padding: var(--spacing-xl) 0;
+                    margin-bottom: var(--spacing-xl);
+                }
+
+                .section h2 {
+                    font-size: 2rem;
+                    margin-bottom: var(--spacing-lg);
+                }
+
+                .section h3 {
+                    margin-top: var(--spacing-lg);
+                    font-size: 1.3rem;
+                }
+
+                .executive-summary {
+                    padding: var(--spacing-xl);
+                    margin-bottom: var(--spacing-xxl);
+                }
+
+                .three-pillars {
+                    padding: var(--spacing-xl);
+                    margin: var(--spacing-xl) 0;
+                }
+
+                /* Values Grid - 2 columns on tablet */
+                .values-container {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-xl);
+                }
+
+                .value-item {
+                    padding: var(--spacing-lg);
+                }
+
+                .ceo-box {
+                    padding: var(--spacing-xl);
+                }
+            }
+
+            /* DESKTOP (1024px and up) */
+            @media (min-width: 1024px) {
+                main {
+                    padding: 0 var(--spacing-xl);
+                }
+
+                .section {
+                    padding: var(--spacing-xxl) 0;
+                }
+
+                .section h2 {
+                    font-size: 2.2rem;
+                }
+
+                /* Values Grid - 2 columns on desktop (or keep as is) */
+                .values-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | About</title>
+    </head>
+    
+    <body>
+        <!-- ============================================================
+             HEADER & NAVIGATION
+             ============================================================ -->
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="image/Lemanyx logo.png" width="40px" height="40px" style="border-radius: 25px;">
+                        <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="https://www.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
+                        <li><a href="about.html" class="present-nav-place" data-translate="nav-about">About</a></li>
+                        <li><a href="carreers.html" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="contact.html" data-translate="nav-contact">Contact Us</a></li>
+                        <li><a href="request_demo.html" class="request-box" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <!-- Hamburger Menu (Mobile) -->
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+        </header>
+
+        <!-- ============================================================
+             MAIN CONTENT
+             ============================================================ -->
+        <main class="container" style="margin-top:20px;">
+            
+            <!-- ============================================================
+                                    EXECUTIVE SUMMARY SECTION 
+                 ============================================================ -->
+            <section class="section executive-summary">
+                <h2 data-translate="about-executive-summary">Executive Summary</h2>
+                
+                <p data-translate="about-summary-new-1">
+                    Lemanyx Intelligence is not just a technology company.
+                </p>
+                
+                <p data-translate="about-summary-new-2">
+                    We are an ARCHITECTURE FOR SOLUTIONS—built by Tanzanians, for Tanzania.
+                </p>
+                
+                <p data-translate="about-summary-new-3">
+                    Our mission is simple: solve Tanzanian problems in almost every sector through cutting-edge technology, strategic thinking, and professional leadership.
+                </p>
+                
+                <p data-translate="about-summary-new-4">
+                    <strong>But here's what makes us different: We don't just build software. We BUILD PEOPLE.</strong>
+                </p>
+                
+                <p data-translate="about-summary-new-5">
+                    We understand that technology without professional leaders is incomplete. Data without strategic thinkers is wasted. Tools without excellent communicators cannot reach the people who need them most.
+                </p>
+                
+                <div class="three-pillars">
+                    <p data-translate="about-summary-new-6">
+                        That's why Lemanyx Intelligence operates on THREE PILLARS:
+                    </p>
+                    
+                    <ul style="margin-left: var(--spacing-lg);">
+                        <li data-translate="about-summary-new-7">ONE: TECHNOLOGY that solves real problems</li>
+                        <li data-translate="about-summary-new-8">TWO: STRATEGIES that create measurable impact</li>
+                        <li data-translate="about-summary-new-9">THREE: LEADERSHIP that communicates change</li>
+                    </ul>
+                </div>
+                
+                <p data-translate="about-summary-new-10">
+                    Our scope is WIDE. Financial inclusion. Healthcare accessibility. Inventory intelligence. Business automation. And more.
+                </p>
+                
+                <p data-translate="about-summary-new-11">
+                    We solve these problems by combining three approaches: <strong>Technical precision</strong> (building systems that work) • <strong>Strategic insight</strong> (understanding what matters) • <strong>Leadership excellence</strong> (communicating the vision)
+                </p>
+                
+                <p style="margin-top: var(--spacing-lg);">
+                    <strong data-translate="about-summary-new-12">The Eloquent Minds is not a separate club. It IS Lemanyx Intelligence.</strong>
+                </p>
+                
+                <p data-translate="about-summary-new-13">
+                    Because the best solution in the world means NOTHING if nobody understands it, believes in it, or knows how to use it. We build professional speakers, strategic communicators, and visionary leaders alongside our technology.
+                </p>
+                
+                <p data-translate="about-summary-new-14">
+                    We are not launching everything at once. We plant roots DEEP. We build strong foundations. Then, when solutions are ready—truly ready—we introduce them to the world.
+                </p>
+                
+                <p style="margin-top: var(--spacing-lg);">
+                    <strong data-translate="about-summary-new-15">This is Lemanyx Intelligence: Architecture of Advanced Intelligence, built by Tanzanians, for Tanzania.</strong>
+                </p>
+            </section>
+
+            <!-- ============================================================
+                 FOUNDER'S NARRATIVE SECTION
+                 ============================================================ -->
+            <section class="section">
+                <h2 data-translate="about-founder-narrative">The Founder's Narrative: The Pivot to Impact</h2>
+                
+                <p data-translate="about-founder-intro">
+                    Every great tech company starts with a "Why." For Lemanyx Intelligence, that "Why" is the transformation of a medical dream into a digital reality.
+                </p>
+                
+                <p data-translate="about-founder-name">
+                    Our founder, <strong>Yusuphu Awadhi Lema</strong>, began his journey with a deep-seated ambition to serve as a medical doctor.
+                </p>
+                
+                <p data-translate="about-founder-realization">
+                    However, as the digital landscape shifted, he recognized a critical bottleneck: a single doctor can help one patient at a time, but a well-architected system can help millions simultaneously.
+                </p>
+                
+                <p data-translate="about-founder-pivot">
+                    By pivoting to Information Technology at IFM, Yusuphu Lema didn't abandon his goal to heal—he upgraded his tools. Lemanyx Intelligence is the culmination of this journey: applying the diagnostic rigor of medicine to the scalability of Artificial Intelligence.
+                </p>
+            </section>
+
+            <!-- ============================================================
+                 CORPORATE PHILOSOPHY SECTION
+                 ============================================================ -->
+            <section class="section">
+                <h2 data-translate="about-corporate-philosophy">Corporate Philosophy</h2>
+                
+                <!-- Vision Statement -->
+                <h3 data-translate="about-vision-title">Vision Statement</h3>
+                <p data-translate="about-vision-text">
+                    To architect a world where advanced intelligence is the heartbeat of human progress, making expert-level healthcare, visual perception, and seamless automation accessible to every corner of the globe.
+                </p>
+
+                <!-- Mission Statement -->
+                <h3 data-translate="about-mission-title">Mission Statement</h3>
+                <p data-translate="about-mission-text">
+                    To engineer high-precision systems that solve humanity's most complex challenges. By bridging the gap between clinical insight and technological innovation, we empower industries to see clearer, act smarter, and live healthier.
+                </p>
+
+                <!-- Core Values -->
+                <h3 data-translate="about-values-title">Core Values - The Lemanyx Intelligence Pillars</h3>
+                
+                <div class="values-container">
+                    <div class="value-item">
+                        <h4 data-translate="about-value-precision-title">Precision</h4>
+                        <p data-translate="about-value-precision">We believe in code that is as accurate as a surgeon's scalpel.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <h4 data-translate="about-value-reliability-title">Reliability</h4>
+                        <p data-translate="about-value-reliability">In a world of "beta" software, Lemanyx delivers systems that stay up when it matters most.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <h4 data-translate="about-value-empathy-title">Empathy</h4>
+                        <p data-translate="about-value-empathy">We build for people. Our AI is designed to enhance human life, not replace it.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <h4 data-translate="about-value-vision-title">Visionary Logic</h4>
+                        <p data-translate="about-value-vision">We look at data and see the future patterns that others miss.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 CEO COMMITMENT SECTION
+                 ============================================================ -->
+            <section class="section">
+                <h2 data-translate="about-ceo-commitment">The CEO Commitment</h2>
+                
+                <p data-translate="about-ceo-text">
+                    At Lemanyx, our leadership operates under a strict "Promptness & Reliability" protocol. We understand that in the 2026 tech economy, speed is the new currency.
+                </p>
+                
+                <div class="ceo-box">
+                    <ul>
+                        <li>
+                            <strong data-translate="about-response-standard">The 3-Hour Response Standard:</strong>
+                            <span data-translate="about-response-standard-desc">We acknowledge all global inquiries within a 3-hour window.</span>
+                        </li>
+                        
+                        <li>
+                            <strong data-translate="about-build-public">Build in Public:</strong>
+                            <span data-translate="about-build-public-desc">We maintain transparency in our R&D, showing our partners the progress from the first line of code to the final deployment.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============================================================
+             FOOTER
+             ============================================================ -->
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+        </footer>
+
+        <!-- ============================================================
+             SCRIPTS
+             ============================================================ -->
+        <!-- Translation System -->
+        <script src="javaScript/translations.js"></script>
+        <script src="javaScript/language-toggle.js"></script>
+        
+        <!-- Form Validation -->
+        <script src="javaScript/form-validation.js"></script>
+
+        <!-- Hamburger Menu Handler -->
+         <script src="javaScript/hamburger-menu.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        
+        <!-- Viewport for mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO & Social Meta Tags -->
+        <meta name="description" content="Request a demo from Lemanyx Intelligence - Schedule a personalized session to explore our solutions.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.lemanyx.com/request_demo.html">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="image/Lemanyx_logo.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Page-Specific Styles - MOBILE FIRST -->
+        <style>
+            /* ============================================================================
+               REQUEST DEMO PAGE - MOBILE FIRST RESPONSIVE DESIGN
+               ============================================================================ */
+
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+
+            /* Hero Section */
+            .demo-hero {
+                text-align: center;
+                padding: var(--spacing-lg) 0;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .demo-hero h1 {
+                font-size: clamp(1.8rem, 6vw, 3rem);
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .demo-hero p {
+                font-size: clamp(0.95rem, 3vw, 1.1rem);
+                color: var(--color-text-dim);
+                margin-bottom: 0;
+                line-height: 1.6;
+            }
+
+            /* Demo Container */
+            .demo-container {
+                background: rgba(0, 212, 255, 0.05);
+                border: 1px solid rgba(0, 212, 255, 0.15);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin-top: var(--spacing-xl);
+                margin-bottom: var(--spacing-xxl);
+            }
+
+            .demo-form-intro {
+                text-align: center;
+                margin-bottom: var(--spacing-lg);
+                color: var(--color-text-muted);
+            }
+
+            /* Form Container */
+            .demo-form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            /* Form Label */
+            .label {
+                margin-bottom: var(--spacing-lg);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .label label {
+                font-weight: 600;
+                margin-bottom: var(--spacing-sm);
+                color: var(--color-text-white);
+                font-size: 0.95rem;
+            }
+
+            /* Form Inputs - Inherited from style.css but override if needed */
+            .demo-form input,
+            .demo-form select,
+            .demo-form textarea {
+                width: 100%;
+                padding: var(--spacing-md) var(--spacing-lg);
+                font-size: 1rem;
+                border: 2px solid var(--color-border-subtle);
+                background: rgba(0, 212, 255, 0.05);
+                color: var(--color-text-white);
+                border-radius: var(--border-radius-sm);
+                transition: all var(--transition-speed) ease;
+                font-family: inherit;
+            }
+
+            .demo-form input::placeholder,
+            .demo-form textarea::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .demo-form input:focus,
+            .demo-form select:focus,
+            .demo-form textarea:focus {
+                outline: none;
+                border-color: var(--color-accent-cyan);
+                background: rgba(0, 212, 255, 0.1);
+                box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+            }
+
+            /* Date input specific */
+            input[type="date"] {
+                cursor: pointer;
+            }
+
+            /* Form buttons container */
+            .form-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-md);
+                margin-top: var(--spacing-lg);
+            }
+
+            /* Submit Button */
+            .demo-btn {
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                width: 100%;
+                transition: all var(--transition-speed) ease;
+                font-size: 1rem;
+            }
+
+            .demo-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+            }
+
+            .demo-btn:active {
+                transform: translateY(-1px);
+            }
+
+            .demo-btn:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+            /* CTA Section */
+            .demo-cta {
+                background: rgba(0, 212, 255, 0.05);
+                border: 2px dashed rgba(0, 212, 255, 0.3);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-xl) var(--spacing-lg);
+                text-align: center;
+                margin-top: var(--spacing-xxl);
+            }
+
+            .demo-cta h3 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
+            }
+
+            .demo-cta p {
+                margin-bottom: var(--spacing-md);
+                color: var(--color-text-muted);
+                line-height: 1.6;
+            }
+
+            /* Why Choose Section */
+            .demo-why-choose {
+                text-align: center;
+                padding: var(--spacing-xl) 0;
+                margin-top: var(--spacing-xxl);
+            }
+
+            .demo-why-choose h2 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .demo-why-choose p {
+                max-width: 600px;
+                margin: 0 auto;
+                color: var(--color-text-muted);
+            }
+
+            /* Benefits Grid */
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin-top: var(--spacing-xl);
+            }
+
+            .benefit-item {
+                background: rgba(0, 212, 255, 0.05);
+                border-left: 4px solid var(--color-accent-cyan);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+                text-align: left;
+            }
+
+            .benefit-item h4 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-sm);
+                font-weight: 600;
+            }
+
+            .benefit-item p {
+                margin-bottom: 0;
+                color: var(--color-text-muted);
+                font-size: 0.95rem;
+            }
+
+            /* Error message styling */
+            .error-message {
+                color: #f44336;
+                font-size: 0.85rem;
+                margin-top: 5px;
+                display: none;
+                font-weight: 600;
+            }
+
+            /* Field with error styling */
+            .field-error {
+                border-color: #f44336 !important;
+                background-color: rgba(244, 67, 54, 0.05) !important;
+            }
+
+            /* Success message */
+            .success-message {
+                background: rgba(76, 175, 80, 0.1);
+                border: 1px solid #4CAF50;
+                border-radius: var(--border-radius-sm);
+                padding: var(--spacing-lg);
+                color: #4CAF50;
+                margin-bottom: var(--spacing-lg);
+                text-align: center;
+                font-weight: 600;
+            }
+
+            /* TABLET (768px and up) */
+            @media (min-width: 768px) {
+                main {
+                    padding: var(--spacing-xl) var(--spacing-lg);
+                }
+
+                .demo-hero {
+                    padding: var(--spacing-xl) 0;
+                    margin-bottom: var(--spacing-xxl);
+                }
+
+                .demo-hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .demo-container {
+                    padding: var(--spacing-xl);
+                }
+
+                .demo-form-intro {
+                    font-size: 1.05rem;
+                }
+
+                .form-buttons {
+                    flex-direction: row;
+                    gap: var(--spacing-lg);
+                }
+
+                .demo-btn {
+                    flex: 1;
+                }
+
+                .demo-cta {
+                    padding: var(--spacing-xxl) var(--spacing-xl);
+                }
+
+                .demo-why-choose {
+                    padding: var(--spacing-xl) 0;
+                }
+
+                /* Benefits Grid - 2 columns on tablet */
+                .benefits-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-xl);
+                }
+            }
+
+            /* DESKTOP (1024px and up) */
+            @media (min-width: 1024px) {
+                main {
+                    padding: var(--spacing-xl) var(--spacing-xl);
+                }
+
+                .demo-hero {
+                    padding: var(--spacing-xxl) 0;
+                    margin-bottom: var(--spacing-xxl);
+                }
+
+                .demo-container {
+                    padding: var(--spacing-xxl) var(--spacing-xl);
+                }
+
+                .demo-form {
+                    max-width: 700px;
+                }
+
+                .demo-cta {
+                    padding: var(--spacing-xxl) var(--spacing-xxl);
+                    margin-top: var(--spacing-xxl);
+                }
+
+                .demo-why-choose {
+                    padding: var(--spacing-xxl) 0;
+                }
+
+                /* Benefits Grid - 3 columns on desktop */
+                .benefits-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            /* LARGE DESKTOP */
+            @media (min-width: 1920px) {
+                main {
+                    padding: var(--spacing-xxl) var(--spacing-xxl);
+                }
+
+                .demo-container {
+                    padding: var(--spacing-xxl) var(--spacing-xxl);
+                }
+
+                .benefits-grid {
+                    gap: var(--spacing-xxl);
+                }
+            }
+
+            /* Accessibility */
+            .demo-btn:focus,
+            .label input:focus,
+            .label select:focus,
+            .label textarea:focus {
+                outline: 2px solid var(--color-accent-cyan);
+                outline-offset: 2px;
+            }
+
+            /* Loading state */
+            .demo-btn.loading {
+                pointer-events: none;
+                opacity: 0.7;
+            }
+
+            .demo-btn.loading::after {
+                content: ' ...';
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | Request Demo</title>
+    </head>
+
+    <body>
+        <!-- ============================================================
+             HEADER & NAVIGATION
+             ============================================================ -->
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="image/Lemanyx logo.png" width="40px" height="40px" style="border-radius: 25px;">
+                        <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="https://www.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="carreers.html" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="contact.html" data-translate="nav-contact">Contact Us</a></li>
+                        <li><a href="request_demo.html" class="request-box present-nav-place" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <!-- Hamburger Menu (Mobile) -->
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+        </header> 
+        
+        <!-- ============================================================
+             MAIN CONTENT
+             ============================================================ -->
+        <main>
+            <!-- HERO SECTION -->
+            <section class="demo-hero">
+                <h1 data-translate="demo-hero-title">Request a Demo</h1>
+                <p data-translate="demo-hero-subtitle">Schedule a personalized session with Lemanyx Intelligence and discover how our solutions can transform your business.</p>
+            </section>
+
+            <!-- DEMO FORM CONTAINER -->
+            <div class="demo-container">
+                <p class="demo-form-intro" data-translate="demo-form-intro">
+                    Explore how solutions from Lemanyx Intelligence can elevate your business. Fill out the form below to connect with our team.
+                </p>
+                
+                <!-- FORM -->
+                <form class="demo-form" id="demoForm">
+                    
+                    <!-- Full Name -->
+                    <div class="label">
+                        <label for="demo-fullname" data-translate="form-fullname-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="demo-fullname" 
+                            name="fullname"
+                            required
+                            data-translate="form-fullname-placeholder"
+                            placeholder="Juma Hassan">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="label">
+                        <label for="demo-email" data-translate="form-email-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="demo-email" 
+                            name="email"
+                            required
+                            data-translate="form-email-placeholder"
+                            placeholder="jumahassan@example.com">
+                    </div>
+
+                    <!-- Company Name -->
+                    <div class="label">
+                        <label for="demo-company" data-translate="demo-company-label">Company Name</label>
+                        <input 
+                            type="text" 
+                            id="demo-company" 
+                            name="company"
+                            required
+                            data-translate="demo-company-placeholder"
+                            placeholder="Your Company Name">
+                    </div>
+
+                    <!-- Job Title -->
+                    <div class="label">
+                        <label for="demo-jobtitle" data-translate="demo-jobtitle-label">Job Title</label>
+                        <input 
+                            type="text" 
+                            id="demo-jobtitle" 
+                            name="jobtitle"
+                            required
+                            data-translate="demo-jobtitle-placeholder"
+                            placeholder="Manager">
+                    </div>
+
+                    <!-- Preferred Date -->
+                    <div class="label">
+                        <label for="demo-demodate" data-translate="demo-date-label">Preferred Demo Date</label>
+                        <input 
+                            type="date" 
+                            id="demo-demodate" 
+                            name="demodate"
+                            required>
+                    </div>
+
+                    <!-- Product Selection -->
+                    <div class="label">
+                        <label for="demo-product" data-translate="demo-product-label">Which solution are you interested in?</label>
+                        <select id="demo-product" name="product" required>
+                            <option value="" data-translate="demo-product-select">-- Select a solution --</option>
+                            <option value="MtonyoFlow" data-translate="demo-product-mtonyoflow">MtonyoFlow - Financial Management</option>
+                            <option value="LemaVision" data-translate="demo-product-lemavision">LemaVision - AI Inventory Intelligence</option>
+                            <option value="AfyaLema" data-translate="demo-product-afyalema">AfyaLema Hub - Health Solutions</option>
+                            <option value="General" data-translate="demo-product-general">General - Overview of all solutions</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-buttons">
+                        <button type="submit" class="demo-btn" id="demoSubmitBtn" data-translate="demo-submit-btn">Schedule Demo</button>
+                    </div>
+                </form>
+
+                <!-- CTA Section -->
+                <div class="demo-cta">
+                    <h3 data-translate="demo-expect-title">What to Expect</h3>
+                    <p data-translate="demo-expect-text">
+                        Our team will guide you through a personalized demonstration tailored to your business needs. 
+                        You'll see how our solutions work and discuss how they can benefit your organization.
+                    </p>
+                </div>
+            </div>
+
+            <!-- WHY CHOOSE SECTION -->
+            <section class="demo-why-choose">
+                <h2 data-translate="demo-why-choose">Why Choose Lemanyx Intelligence?</h2>
+                <p data-translate="demo-why-choose-subtitle">
+                    We're not just selling products. We're building partnerships with businesses that want to transform.
+                </p>
+
+                <div class="benefits-grid">
+                    <!-- Benefit 1 -->
+                    <div class="benefit-item">
+                        <h4 data-translate="demo-benefit-tailored-title">Tailored Solutions</h4>
+                        <p data-translate="demo-benefit-tailored-desc">
+                            Each solution is customized to your specific business needs, not a one-size-fits-all approach.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="benefit-item">
+                        <h4 data-translate="demo-benefit-scalable-title">Scalable Technology</h4>
+                        <p data-translate="demo-benefit-scalable-desc">
+                            Our systems grow with your business, from startup to enterprise, without losing performance.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="benefit-item">
+                        <h4 data-translate="demo-benefit-support-title">Dedicated Support</h4>
+                        <p data-translate="demo-benefit-support-desc">
+                            3-hour response time. Professional team. Real-time assistance when you need it.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============================================================
+             FOOTER
+             ============================================================ -->
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+        </footer>
+
+        <!-- ============================================================
+             SCRIPTS
+             ============================================================ -->
+        <!-- Translation System -->
+        <script src="javaScript/translations.js"></script>
+        <script src="javaScript/language-toggle.js"></script>
+        
+        <!-- Form Validation -->
+        <script src="javaScript/form-validation.js"></script>
+
+        <!-- Demo Form Specific Functionality -->
+        <script>
+            /**
+             * ============================================================================
+             * REQUEST DEMO FORM - SUBMISSION & HANDLING
+             * ============================================================================
+             */
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const demoForm = document.getElementById('demoForm');
+                const submitBtn = document.getElementById('demoSubmitBtn');
+
+                if (demoForm) {
+                    /**
+                     * Handle form submission
+                     */
+                    demoForm.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+
+                        // Get current language
+                        const language = localStorage.getItem('preferredLanguage') || 'en';
+
+                        // Validate form before submitting
+                        if (!validateForm(demoForm)) {
+                            const errorMsg = language === 'en' 
+                                ? 'Please fix the errors above' 
+                                : 'Tafadhali sahihishe hitilafu hapo juu';
+                            showMessage(errorMsg, 'error');
+                            return;
+                        }
+
+                        // Get form data
+                        const formData = new FormData(demoForm);
+                        const data = {
+                            fullname: formData.get('fullname'),
+                            email: formData.get('email'),
+                            company: formData.get('company'),
+                            jobtitle: formData.get('jobtitle'),
+                            demodate: formData.get('demodate'),
+                            product: formData.get('product')
+                        };
+
+                        // Show loading state
+                        submitBtn.disabled = true;
+                        submitBtn.classList.add('loading');
+
+                        try {
+                            /**
+                             * Send data to backend
+                             * Replace 'http://localhost:5000' with your actual backend URL
+                             */
+                            const response = await fetch('http://localhost:5000/api/submit-demo-request', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            const result = await response.json();
+
+                            if (response.ok) {
+                                // Success!
+                                const successMsg = language === 'en'
+                                    ? `Thank you ${data.fullname}! We'll be in touch soon to schedule your demo.`
+                                    : `Asante ${data.fullname}! Tutakuwasiliana karibu kukamatia kwa yako.`;
+                                
+                                showMessage(successMsg, 'success');
+
+                                // Reset form
+                                demoForm.reset();
+
+                                // Clear validation errors
+                                demoForm.querySelectorAll('.field-error').forEach(field => {
+                                    clearFieldError(field);
+                                });
+
+                                // Scroll to top
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            } else {
+                                // Error from backend
+                                const errorMsg = result.message || 
+                                    (language === 'en' ? 'Error submitting form' : 'Hitilafu ya kukamatia fomu');
+                                showMessage(errorMsg, 'error');
+                            }
+
+                        } catch (error) {
+                            console.error('Error:', error);
+                            
+                            const errorMsg = language === 'en'
+                                ? 'Could not connect to server. Please check your internet connection.'
+                                : 'Haiwezi kuunganisha seva. Tafadhali angalia muunganisho wako wa mtandao.';
+                            
+                            showMessage(errorMsg, 'error');
+                        } finally {
+                            // Remove loading state
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('loading');
+                        }
+                    });
+                }
+
+                /**
+                 * Set minimum date to today
+                 * Prevents booking demos in the past
+                 */
+                const dateInput = document.getElementById('demo-demodate');
+                if (dateInput) {
+                    const today = new Date().toISOString().split('T')[0];
+                    dateInput.min = today;
+                }
+            });
+
+            /**
+             * Show notification message to user
+             * 
+             * @param {string} message - Message to display
+             * @param {string} type - 'success' or 'error'
+             */
+            function showMessage(message, type) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message message-${type}`;
+                messageDiv.textContent = message;
+                messageDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    z-index: 1000;
+                    max-width: 300px;
+                    background: ${type === 'success' ? '#4CAF50' : '#f44336'};
+                    color: white;
+                    font-weight: 600;
+                    animation: slideIn 0.3s ease;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                `;
+
+                document.body.appendChild(messageDiv);
+
+                setTimeout(() => {
+                    messageDiv.remove();
+                }, 4000);
+            }
+        </script>
+            <!-- Hamburger Menu Handler -->
+<script src="javaScript/hamburger-menu.js"></script>
+    </body>
+
+</html>

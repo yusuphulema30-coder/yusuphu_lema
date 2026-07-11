@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        
+        <!-- Viewport for mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO & Social Meta Tags -->
+        <meta name="description" content="Contact Lemanyx Intelligence - Get in touch via LinkedIn, Instagram, WhatsApp, or Email.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="image/Lemanyx_logo.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Page-Specific Styles - MOBILE FIRST -->
+        <style>
+            /* ============================================================================
+               CONTACT PAGE - MOBILE FIRST RESPONSIVE DESIGN
+               ============================================================================ */
+
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+
+            /* Hero Section */
+            .contact-hero {
+                text-align: center;
+                padding: var(--spacing-lg) 0;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .contact-hero h1 {
+                font-size: clamp(1.8rem, 6vw, 3rem);
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .contact-hero p {
+                font-size: clamp(0.95rem, 3vw, 1.1rem);
+                color: var(--color-text-dim);
+                margin-bottom: 0;
+            }
+
+            /* Contact Cards Container - MOBILE FIRST (1 column) */
+            .contact-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin-bottom: var(--spacing-xxl);
+            }
+
+            /* Individual Contact Card */
+            .contact-card {
+                background: rgba(0, 212, 255, 0.05);
+                border: 1px solid rgba(0, 212, 255, 0.15);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                text-align: center;
+                transition: all var(--transition-speed) ease;
+            }
+
+            .contact-card:hover {
+                background: rgba(0, 212, 255, 0.1);
+                border-color: rgba(0, 212, 255, 0.3);
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(0, 212, 255, 0.15);
+            }
+
+            /* Contact Icon */
+            .contact-icon {
+                font-size: 2.5rem;
+                margin-bottom: var(--spacing-md);
+                display: block;
+            }
+
+            /* Contact Card Heading */
+            .contact-card h3 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+                font-size: 1.2rem;
+            }
+
+            /* Contact Card Description */
+            .contact-card p {
+                margin-bottom: var(--spacing-md);
+                color: var(--color-text-muted);
+                line-height: 1.6;
+            }
+
+            /* Contact Links */
+            .contact-card a {
+                color: var(--color-accent-cyan);
+                font-weight: 600;
+                text-decoration: none;
+                transition: all var(--transition-speed) ease;
+                display: inline-block;
+                padding: var(--spacing-sm) 0;
+                border-bottom: 2px solid transparent;
+            }
+
+            .contact-card a:hover {
+                color: rgba(0, 212, 255, 0.8);
+                border-bottom-color: var(--color-accent-cyan);
+            }
+
+            .contact-card a:active {
+                transform: scale(0.98);
+            }
+
+            /* Special styling for different contact types */
+            .contact-card.linkedin-card:hover {
+                border-color: #0A66C2;
+            }
+
+            .contact-card.instagram-card:hover {
+                border-color: #E4405F;
+            }
+
+            .contact-card.whatsapp-card:hover {
+                border-color: #25D366;
+            }
+
+            .contact-card.email-card:hover {
+                border-color: #EA4335;
+            }
+
+            /* Call to Action Section */
+            .contact-cta {
+                background: rgba(0, 212, 255, 0.05);
+                border: 2px dashed rgba(0, 212, 255, 0.3);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-xl) var(--spacing-lg);
+                text-align: center;
+                margin-top: var(--spacing-xxl);
+            }
+
+            .contact-cta h2 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+                font-size: clamp(1.3rem, 4vw, 1.8rem);
+            }
+
+            .contact-cta p {
+                margin-bottom: var(--spacing-md);
+                color: var(--color-text-muted);
+            }
+
+            /* Response Time Badge */
+            .response-badge {
+                display: inline-block;
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-sm) var(--spacing-md);
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                font-size: 0.9rem;
+                margin-top: var(--spacing-md);
+            }
+
+            /* TABLET (768px and up) - 2 COLUMNS */
+            @media (min-width: 768px) {
+                main {
+                    padding: var(--spacing-xl) var(--spacing-lg);
+                }
+
+                .contact-hero {
+                    padding: var(--spacing-xl) 0;
+                    margin-bottom: var(--spacing-xxl);
+                }
+
+                .contact-hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                /* Contact Cards - 2 columns on tablet */
+                .contact-section {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-xl);
+                }
+
+                .contact-card {
+                    padding: var(--spacing-xl);
+                }
+
+                .contact-icon {
+                    font-size: 3rem;
+                }
+
+                .contact-cta {
+                    padding: var(--spacing-xxl) var(--spacing-xl);
+                }
+            }
+
+            /* DESKTOP (1024px and up) - 4 COLUMNS */
+            @media (min-width: 1024px) {
+                main {
+                    padding: var(--spacing-xl) var(--spacing-xl);
+                }
+
+                .contact-hero {
+                    padding: var(--spacing-xxl) 0;
+                    margin-bottom: var(--spacing-xxl);
+                }
+
+                /* Contact Cards - 4 columns on desktop */
+                .contact-section {
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: var(--spacing-xl);
+                }
+
+                .contact-card {
+                    padding: var(--spacing-xl);
+                }
+
+                .contact-card h3 {
+                    font-size: 1.3rem;
+                }
+
+                .contact-cta {
+                    padding: var(--spacing-xxl) var(--spacing-xxl);
+                    margin-top: var(--spacing-xxl);
+                }
+            }
+
+            /* LARGE DESKTOP (1920px and up) - EXTRA PADDING */
+            @media (min-width: 1920px) {
+                main {
+                    padding: var(--spacing-xxl) var(--spacing-xxl);
+                }
+
+                .contact-section {
+                    gap: var(--spacing-xxl);
+                }
+            }
+
+            /* Accessibility - Focus states */
+            .contact-card a:focus,
+            .contact-card:focus-within {
+                outline: 2px solid var(--color-accent-cyan);
+                outline-offset: 2px;
+            }
+
+            /* Print styles */
+            @media print {
+                .contact-card {
+                    page-break-inside: avoid;
+                }
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | Contact Us</title>
+    </head>
+    
+    <body>
+        <!-- ============================================================
+             HEADER & NAVIGATION
+             ============================================================ -->
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="image/Lemanyx logo.png" width="40px" height="40px" style="border-radius: 25px;">
+                        <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="https://www.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="carreers.html" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="contact.html" class="present-nav-place" data-translate="nav-contact">Contact Us</a></li>
+                        <li><a href="request_demo.html" class="request-box" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <!-- Hamburger Menu (Mobile) -->
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+            
+            <!-- Hero Section -->
+            <section class="contact-hero">
+                <h1 data-translate="contact-hero-title">Get In Touch</h1>
+                <p data-translate="contact-hero-subtitle">Reach out to us through your preferred channel</p>
+            </section>
+        </header>
+
+   
+        <main>
+            <!-- Contact Cards Section -->
+            <section class="contact-section">
+                
+                <!-- LINKEDIN CARD -->
+                <article class="contact-card linkedin-card">
+                    <div class="contact-icon">🌍</div>
+                    <h3 data-translate="contact-linkedin-title">LinkedIn</h3>
+                    <p data-translate="contact-linkedin-desc">Connect with us on LinkedIn for updates and insights</p>
+                    <a 
+                        href="https://www.linkedin.com/in/yusuphu-awadhi-lema-08675a39a" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        data-translate="contact-linkedin-link">
+                        Visit LinkedIn Profile
+                    </a>
+                </article>
+
+                <!-- INSTAGRAM CARD -->
+                <article class="contact-card instagram-card">
+                    <div class="contact-icon">📷</div>
+                    <h3 data-translate="contact-instagram-title">Instagram</h3>
+                    <p data-translate="contact-instagram-desc">Follow us for company updates and insights</p>
+                    <a 
+                        href="https://www.instagram.com/yusuphulema" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        data-translate="contact-instagram-handle">
+                        @yusuphulema
+                    </a>
+                </article>
+
+                <!-- WHATSAPP CARD -->
+                <article class="contact-card whatsapp-card">
+                    <div class="contact-icon">📱</div>
+                    <h3 data-translate="contact-whatsapp-title">WhatsApp</h3>
+                    <p data-translate="contact-whatsapp-desc">Chat with us directly on WhatsApp</p>
+                    <a 
+                        href="https://wa.me/255760356680" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        data-translate="contact-whatsapp-number">
+                        +255 760 356 680
+                    </a>
+                </article>
+
+                <!-- EMAIL CARD -->
+                <article class="contact-card email-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3 data-translate="contact-email-title">Email</h3>
+                    <p data-translate="contact-email-desc">Send us an email directly</p>
+                    <a 
+                        href="mailto:yusuphulema30@gmail.com"
+                        data-translate="contact-email-address">
+                        yusuphulema30@gmail.com
+                    </a>
+                </article>
+
+            </section>
+
+            <!-- Call to Action Section -->
+            <section class="contact-cta">
+                <h2 data-translate="contact-cta-title">Let's Build Together</h2>
+                <p data-translate="contact-cta-text">
+                    We're excited to hear from you. Whether you have questions about our solutions, 
+                    want to discuss a partnership, or just want to say hello—we'd love to connect.
+                </p>
+                <div class="response-badge" data-translate="contact-response-time">
+                    ⚡ 3-Hour Response Time
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+        </footer>
+
+
+        <!-- Translation System -->
+        <script src="javaScript/translations.js"></script>
+        <script src="javaScript/language-toggle.js"></script>
+        
+        <!-- Form Validation -->
+        <script src="javaScript/form-validation.js"></script>
+
+        <!-- Contact Page Analytics -->
+        <script>
+           
+             // Track which contact channels users click on
+            document.addEventListener('DOMContentLoaded', function() {
+                const contactLinks = document.querySelectorAll('.contact-card a');
+                
+                contactLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        // Get the contact type (LinkedIn, Instagram, WhatsApp, Email)
+                        const contactType = this.closest('.contact-card').className
+                            .split(' ')
+                            .find(cls => cls.includes('-card'))
+                            .replace('-card', '');
+                        
+                        // Log to console (you can send to analytics service)
+                        console.log(`User clicked ${contactType} contact link`);
+                    });
+                });
+            });
+        </script>
+        <!-- Hamburger Menu Handler -->
+    <script src="javaScript/hamburger-menu.js"></script>
+    </body>
+    
+</html>

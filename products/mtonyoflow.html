@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        
+        <!-- Viewport for mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO & Social Meta Tags -->
+        <meta name="description" content="MtonyoFlow - Smart financial management system for Tanzanian small businesses. Track income, expenses, forecasts, and TRA compliance.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        <meta name="keywords" content="MtonyoFlow, financial management, SME, Tanzania, SMS, USSD">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.lemanyx.com/products/mtonyoflow.html">
+        <meta property="og:title" content="MtonyoFlow - Smart Financial Management">
+        <meta property="og:description" content="Financial intelligence for Tanzanian SMEs">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="../image/Lemanyx_logo.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <!-- Page-Specific Styles - MOBILE FIRST -->
+        <style>
+            /* ============================================================================
+               PRODUCT PAGE - MOBILE FIRST RESPONSIVE DESIGN
+               ============================================================================ */
+
+            /* Product Header */
+            .product-header {
+                text-align: center;
+                padding: var(--spacing-lg) var(--spacing-md);
+                margin-bottom: var(--spacing-xl);
+                background: rgba(0, 212, 255, 0.05);
+                border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+            }
+
+            .product-header img {
+                width: 100%;
+                max-width: 150px;
+                height: auto;
+                border-radius: var(--border-radius);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .product-header h1 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-sm);
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            .product-header p {
+                font-style: italic;
+                color: var(--color-text-dim);
+                margin-bottom: var(--spacing-sm);
+                font-size: clamp(0.9rem, 3vw, 1rem);
+            }
+
+            /* Main content */
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: 0 var(--spacing-md);
+            }
+
+            /* Section styling */
+            .product-section {
+                padding: var(--spacing-lg) 0;
+                margin-bottom: var(--spacing-lg);
+                border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            }
+
+            .product-section:last-child {
+                border-bottom: none;
+            }
+
+            .product-section h2 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .product-section h3 {
+                color: var(--color-text-white);
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-sm);
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+            }
+
+            .product-section p {
+                line-height: 1.8;
+                margin-bottom: var(--spacing-md);
+                color: var(--color-text-muted);
+            }
+
+            .product-section ul {
+                margin-left: var(--spacing-lg);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .product-section li {
+                margin-bottom: var(--spacing-md);
+                line-height: 1.8;
+                color: var(--color-text-muted);
+            }
+
+            .product-section strong {
+                color: var(--color-accent-cyan);
+            }
+
+            /* Feature list */
+            .feature-list {
+                background: rgba(0, 212, 255, 0.05);
+                border-left: 4px solid var(--color-accent-cyan);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+                margin: var(--spacing-lg) 0;
+            }
+
+            .feature-list li {
+                margin-bottom: var(--spacing-md);
+            }
+
+            /* Pricing table */
+            .pricing-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: var(--spacing-lg) 0;
+                overflow-x: auto;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                padding: var(--spacing-md);
+                border: 1px solid rgba(0, 212, 255, 0.2);
+                text-align: left;
+            }
+
+            .pricing-table th {
+                background-color: rgba(0, 212, 255, 0.1);
+                color: var(--color-accent-cyan);
+                font-weight: 600;
+            }
+
+            .pricing-table tbody tr:hover {
+                background-color: rgba(0, 212, 255, 0.05);
+            }
+
+            /* Back button */
+            .back-button {
+                display: inline-block;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .back-button .btn {
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-lg);
+                text-decoration: none;
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                display: inline-block;
+                transition: all var(--transition-speed) ease;
+            }
+
+            .back-button .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+            }
+
+            /* CTA Button */
+            .cta-button {
+                display: inline-block;
+                background: linear-gradient(135deg, #2d7a2d, #1f5c1f);
+                color: var(--color-text-white);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+                text-decoration: none;
+                font-weight: 600;
+                transition: all var(--transition-speed) ease;
+                margin-top: var(--spacing-md);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(45, 122, 45, 0.4);
+            }
+
+            /* Impact section */
+            .impact-highlight {
+                background: rgba(0, 212, 255, 0.05);
+                border: 2px solid rgba(0, 212, 255, 0.3);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin: var(--spacing-xl) 0;
+            }
+
+            .impact-highlight strong {
+                color: var(--color-accent-cyan);
+                font-size: 1.1rem;
+            }
+
+            /* TABLET (768px and up) */
+            @media (min-width: 768px) {
+                main {
+                    padding: 0 var(--spacing-lg);
+                }
+
+                .product-header {
+                    padding: var(--spacing-xl) var(--spacing-lg);
+                }
+
+                .product-header img {
+                    max-width: 200px;
+                }
+
+                .product-section {
+                    padding: var(--spacing-xl) 0;
+                    margin-bottom: var(--spacing-xl);
+                }
+
+                .pricing-table th,
+                .pricing-table td {
+                    padding: var(--spacing-lg);
+                }
+            }
+
+            /* DESKTOP (1024px and up) */
+            @media (min-width: 1024px) {
+                main {
+                    padding: 0 var(--spacing-xl);
+                }
+
+                .product-header {
+                    padding: var(--spacing-xxl) var(--spacing-xl);
+                    border: 2px solid rgba(0, 212, 255, 0.3);
+                }
+
+                .product-section {
+                    padding: var(--spacing-xxl) 0;
+                }
+                .coming-soon-top{
+                background: rgba(0, 212, 255, 0.05);
+                border: 2px solid rgba(0, 212, 255, 0.3);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin: var(--spacing-xl) 15px;
+                text-align: center;
+            }
+                .product-section h2 {
+                    font-size: 2.2rem;
+                }
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | MtonyoFlow</title>
+    </head>
+
+    <body>
+        <!-- ============================================================
+             HEADER & NAVIGATION
+             ============================================================ -->
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="../image/Lemanyx logo.png" width="40px" height="40px" style="border-radius: 20px;">
+                        <a href="../home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="../home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="../about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="../carreers.html" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="contact.html" data-translate="nav-contact">Contact</a></li>
+                        <li><a href="request_demo.html" class="request-box" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <!-- Hamburger Menu (Mobile) -->
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+
+
+            <!-- Product Header -->
+            <section class="product-header">
+                <img src="../image/MtonyoFlow.png" alt="MtonyoFlow - Financial management for Tanzanian SMEs" class="product-logo">
+                <h1 data-translate="mtonyoflow-title">MtonyoFlow</h1>
+                <p data-translate="mtonyoflow-subtitle">Mfumo wa Usimamizi wa Fedha kwa Biashara Ndogo za Tanzania</p>
+                <p data-translate="mtonyoflow-subtitle-en">(Financial Management System for Small Tanzanian Businesses)</p>
+            </section>
+        </header>
+        
+        <!-- ============================================================
+             MAIN CONTENT
+             ============================================================ -->
+        <main>
+            
+            <!-- WHAT IS MTONYOFLOW -->
+            <section class="product-section">
+                <h2 data-translate="mtonyoflow-what-is">What Is MtonyoFlow?</h2>
+                
+                <p data-translate="mtonyoflow-intro">
+                    MtonyoFlow is a multi-channel financial management platform built exclusively for Small and Medium Enterprises (SMEs) in Tanzania. 
+                    It is not a copy of a foreign accounting tool adapted for Africa. It is not a generic bookkeeping app translated into Swahili. 
+                    It is a system designed from the ground up for the Tanzanian business owner.
+                </p>
+
+                <h3 data-translate="mtonyoflow-channels">Three-Channel Integration</h3>
+                <p>MtonyoFlow works across three channels simultaneously:</p>
+                <ul class="feature-list">
+                    <li><strong>Web Application (PWA)</strong> — for smartphone users with internet access</li>
+                    <li><strong>SMS</strong> — for basic phone users who send commands like SALE 5000 or EXPENSE 2000</li>
+                    <li><strong>USSD</strong> — for anyone on any phone, on any network, with zero internet required</li>
+                </ul>
+
+                <p>
+                    All three channels feed into one unified system. One database. One balance. One complete financial picture — 
+                    regardless of which channel the business owner uses to record their transactions.
+                </p>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section class="product-section">
+                <h2 data-translate="mtonyoflow-problem">The Problem MtonyoFlow Solves</h2>
+                
+                <p>
+                    Tanzania has over four million SMEs contributing more than 35 percent of the national GDP. 
+                    They employ millions of Tanzanians and form the backbone of the economy. 
+                    Yet the overwhelming majority of them are running their businesses completely blind.
+                </p>
+
+                <h3>1. Manual Bookkeeping</h3>
+                <p>
+                    Most SME owners record their income and expenses in exercise books, on scraps of paper, or in their memory. 
+                    There is no aggregation, no calculation, no analysis. At the end of the week, they count cash and guess whether they made a profit.
+                </p>
+
+                <h3>2. No Real-Time Financial Visibility</h3>
+                <p>A business owner in Tanzania cannot answer simple questions like:</p>
+                <ul style="margin-left: var(--spacing-lg);">
+                    <li>How much money do I have right now?</li>
+                    <li>How much did I spend today?</li>
+                    <li>Did I make a profit this week?</li>
+                    <li>Will I have enough money next month?</li>
+                </ul>
+
+                <h3>3. Unexpected Cash Shortages</h3>
+                <p>
+                    The most common cause of SME failure in Sub-Saharan Africa is not bad products or lazy owners. 
+                    It is cash flow mismanagement. Money runs out without warning. Rent cannot be paid. Stock cannot be replenished.
+                </p>
+
+                <h3>4. TRA Tax Penalties</h3>
+                <p>
+                    The Tanzania Revenue Authority (TRA) requires businesses to file annual tax returns. 
+                    Without proper records, this becomes a crisis every January.
+                </p>
+
+                <h3>5. No Access to Financial Tools</h3>
+                <p>
+                    The tools that exist for financial management were built for large enterprises in developed economies. 
+                    They are expensive, complex, require constant internet, and are entirely uncalibrated to the realities of a duka owner.
+                </p>
+
+                <p><strong>MtonyoFlow closes every one of these gaps.</strong></p>
+            </section>
+
+            <!-- CORE FEATURES -->
+            <section class="product-section">
+                <h2 data-translate="mtonyoflow-features">Core Features of MtonyoFlow</h2>
+
+                <h3>1. Real-Time Balance Tracking</h3>
+                <p>
+                    Every transaction recorded — whether via the web app, SMS command, or USSD menu — instantly updates the user's running balance.
+                </p>
+
+                <h3>2. Three-Channel Transaction Entry</h3>
+                <p>Record a sale by opening the web app, sending SALE 5000 as SMS, or dialling a USSD code. All three paths save to the same database.</p>
+
+                <h3>3. Automated Alerts</h3>
+                <p>The system sends SMS warnings when:</p>
+                <ul style="margin-left: var(--spacing-lg);">
+                    <li>Cash balance falls below TZS 10,000</li>
+                    <li>Daily expenses exceed TZS 50,000</li>
+                    <li>No income recorded for 24 hours</li>
+                </ul>
+
+                <h3>4. AI-Powered 30-Day Cash Flow Forecast</h3>
+                <p>
+                    Using a Moving Average model, MtonyoFlow predicts the next 30 days of cash flow. 
+                    Each predicted day is classified as CRITICAL, LOW RISK, or HEALTHY.
+                </p>
+
+                <h3>5. Financial Reports</h3>
+                <ul class="feature-list">
+                    <li><strong>Weekly Summary</strong> — income, expenses, profit</li>
+                    <li><strong>Monthly P&L</strong> — profit & loss statement</li>
+                    <li><strong>TRA Annual Report</strong> — Tanzania Revenue Authority compliant</li>
+                    <li><strong>Budget Report</strong> — AI-powered recommendations</li>
+                    <li><strong>Invoices</strong> — professional invoices with VAT</li>
+                </ul>
+
+                <h3>6. Offline-First Design</h3>
+                <p>
+                    MtonyoFlow works without internet. The web app caches offline. 
+                    Transactions entered without connectivity sync automatically when internet returns.
+                </p>
+
+                <h3>7. TRA Tax Compliance</h3>
+                <p>
+                    The system automatically calculates Tanzania's presumptive tax brackets and generates a compliant annual tax report.
+                </p>
+
+                <h3>8. Mobile Money Payments</h3>
+                <p>Pay for your subscription via M-Pesa, Airtel Money, Mixx by Yas, or HaloPesa.</p>
+            </section>
+
+            <!-- PRICING -->
+            <section class="product-section">
+                <h2>Pricing Plans</h2>
+                <p>Affordable pricing designed for Tanzanian SMEs:</p>
+
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Cost</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Free Trial</strong></td>
+                            <td>TZS 0</td>
+                            <td>First 10 days, every new user</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Msingi (Basic)</strong></td>
+                            <td>TZS 10,000/month</td>
+                            <td>Core tracking needs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kamili (Premium)</strong></td>
+                            <td>TZS 25,000/month</td>
+                            <td>Full features including AI forecast</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kamili Mwaka (Annual)</strong></td>
+                            <td>TZS 200,000/year</td>
+                            <td>Committed users (save 33%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- IMPACT -->
+            <section class="product-section">
+                <h2>The Impact of MtonyoFlow</h2>
+                
+                <div class="impact-highlight">
+                    <p>
+                        <strong>MtonyoFlow is not just a software product. It is financial inclusion infrastructure for Tanzania's informal economy.</strong>
+                    </p>
+                </div>
+
+                <p>
+                    When a business owner can see their numbers clearly, they make better decisions. 
+                    Better decisions lead to stronger weeks. Stronger weeks lead to businesses that survive past three years.
+                </p>
+
+                <p>
+                    Research across Sub-Saharan Africa shows that better financial visibility increases small business survival rates by over 40 percent.
+                </p>
+
+                <p>
+                    <strong>If MtonyoFlow helps 10,000 Tanzanian SMEs improve their financial management, 
+                    that is 10,000 families with more stable incomes, 10,000 businesses less likely to close, 
+                    and tens of thousands of employees with more secure jobs.</strong>
+                </p>
+            </section>
+
+            <!-- TECHNICAL -->
+            <section class="product-section">
+                <h2>Technical Foundation</h2>
+                <p>MtonyoFlow is built on a production-grade, automation-first technology stack:</p>
+
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Technology</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Backend API</strong></td>
+                            <td>Python / Flask</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Automation</strong></td>
+                            <td>n8n</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Database</strong></td>
+                            <td>Supabase (PostgreSQL)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>Next.js Progressive Web App</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Offline Storage</strong></td>
+                            <td>IndexedDB</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SMS & USSD</strong></td>
+                            <td>Africa's Talking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobile Money</strong></td>
+                            <td>M-Pesa, Airtel Money, Mixx, HaloPesa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hosting</strong></td>
+                            <td>Vercel + Railway</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- ONE LINER -->
+            <section class="product-section">
+                <h2>MtonyoFlow in One Sentence</h2>
+                <div class="impact-highlight">
+                    <p>
+                        <strong>
+                            MtonyoFlow gives every Tanzanian SME owner — regardless of phone, internet, or education level — 
+                            the financial intelligence they need to run their business clearly, plan confidently, 
+                            comply with TRA, and never be surprised by an empty till again.
+                        </strong>
+                    </p>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="product-section" style="text-align: center;">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Start your free 10-day trial of MtonyoFlow today. No credit card required.</p>
+                <a href="../request_demo.html" class="cta-button">Schedule a Demo</a>
+            </section>
+
+            <!-- Back Button -->
+            <div class="back-button">
+                <a href="../home.html" class="btn">← Back to Home</a>
+            </div>
+
+        </main>
+
+        <!-- ============================================================
+             FOOTER
+             ============================================================ -->
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+        </footer>
+
+        <!-- ============================================================
+             SCRIPTS
+             ============================================================ -->
+        <script src="../javaScript/hamburger-menu.js"></script>
+        <script src="../javaScript/translations.js"></script>
+        <script src="../javaScript/language-toggle.js"></script>
+    </body>
+</html>

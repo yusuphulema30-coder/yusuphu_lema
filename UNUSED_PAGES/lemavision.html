@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="LemaVision - AI Inventory Intelligence for advanced visual perception and analytics. Coming soon to Lemanyx Intelligence.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.lemanyx.com/products/lemavision.html">
+        
+        <link rel="icon" type="image/png" href="../image/Lemanyx_logo.png">
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <style>
+            /* ============================================================================
+               LEMAVISION COMING SOON PAGE - MOBILE FIRST
+               ============================================================================ */
+
+            .coming-soon-header {
+                text-align: center;
+                padding: var(--spacing-lg) var(--spacing-md);
+                margin-bottom: var(--spacing-xl);
+                background: rgba(0, 212, 255, 0.05);
+                border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+            }
+
+            .coming-soon-header img {
+                width: 100%;
+                max-width: 150px;
+                height: auto;
+                border-radius: var(--border-radius);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .coming-soon-header h1 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-sm);
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            .coming-soon-header p {
+                color: var(--color-text-dim);
+                font-size: 1rem;
+            }
+
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: 0 var(--spacing-md);
+            }
+
+            .coming-soon-box {
+                background: rgba(0, 212, 255, 0.05);
+                border: 2px dashed rgba(0, 212, 255, 0.3);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin: var(--spacing-xl) 0;
+                text-align: center;
+            }
+
+            .coming-soon-top{
+                background: rgba(0, 212, 255, 0.05);
+                border: 2px solid rgba(0, 212, 255, 0.3);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                margin: var(--spacing-xl) 15px;
+                text-align: center;
+            }
+
+            .coming-soon-box h2 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .coming-soon-box p {
+                color: var(--color-text-muted);
+                line-height: 1.8;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .action-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-md);
+                margin-top: var(--spacing-lg);
+            }
+
+            .action-buttons a {
+                display: inline-block;
+            }
+
+            .action-buttons .btn {
+                width: 100%;
+                text-align: center;
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all var(--transition-speed) ease;
+            }
+
+            .action-buttons .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+            }
+
+            .features-preview {
+                padding: var(--spacing-xl) 0;
+                margin-top: var(--spacing-xxl);
+            }
+
+            .features-preview h3 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-lg);
+                text-align: center;
+                font-size: clamp(1.3rem, 4vw, 1.8rem);
+            }
+
+            .feature-items {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+
+            .feature-item {
+                background: rgba(0, 212, 255, 0.05);
+                border-left: 4px solid var(--color-accent-cyan);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+            }
+
+            .feature-item h4 {
+                color: var(--color-accent-cyan);
+                margin-bottom: var(--spacing-sm);
+                font-weight: 600;
+            }
+
+            .feature-item p {
+                color: var(--color-text-muted);
+                margin-bottom: 0;
+            }
+
+            .back-button {
+                display: inline-block;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .back-button .btn {
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-lg);
+                text-decoration: none;
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                transition: all var(--transition-speed) ease;
+            }
+
+            .back-button .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+            }
+
+            @media (min-width: 768px) {
+                main {
+                    padding: 0 var(--spacing-lg);
+                }
+
+                .coming-soon-header {
+                    padding: var(--spacing-xl) var(--spacing-lg);
+                }
+
+                .coming-soon-box {
+                    padding: var(--spacing-xl);
+                }
+
+                .action-buttons {
+                    flex-direction: row;
+                }
+
+                .action-buttons .btn {
+                    width: auto;
+                    flex: 1;
+                }
+
+                .feature-items {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-xl);
+                }
+            }
+
+            @media (min-width: 1024px) {
+                main {
+                    padding: 0 var(--spacing-xl);
+                }
+
+                .feature-items {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | LemaVision</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <div class="logo">
+                        <img src="image/Lemanyx logo.png" width="40px" height="40px" style="border-radius: 25px;">
+                        <a href="../home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="../home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="https://www.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
+                        <li><a href="../about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="../carreers.html" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="../contact.html" data-translate="nav-contact">Contact Us</a></li>
+                        <li><a href="../request_demo.html" class="request-box" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+
+            <section class="coming-soon-header coming-soon-top" style="margin-top: 25px;">
+                <img src="../image/LemaVision.png" alt="LemaVision Logo" class="product-logo">
+                <h1 data-translate="lemavision-title">LemaVision</h1>
+                <p data-translate="lemavision-subtitle">AI Inventory Intelligence</p>
+            </section>
+        </header>
+
+        <main>
+            <section class="coming-soon-box">
+                <h2 data-translate="coming-soon-title">Coming Soon</h2>
+                <p data-translate="lemavision-coming-soon-text">
+                    LemaVision, our cutting-edge AI inventory intelligence system, is under active development. 
+                    This powerful tool will revolutionize how businesses track, analyze, and optimize their inventory 
+                    using advanced computer vision and machine learning.
+                </p>
+                <p data-translate="coming-soon-waiting">
+                    Thank you for your interest and patience as we bring this innovation to market.
+                </p>
+            </section>
+
+            <section class="features-preview">
+                <h3 data-translate="coming-soon-preview">What's Coming</h3>
+                <div class="feature-items">
+                    <div class="feature-item">
+                        <h4 data-translate="lemavision-feature-1-title">Real-Time Vision Intelligence</h4>
+                        <p data-translate="lemavision-feature-1-desc">
+                            See your inventory in real-time with advanced computer vision technology.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h4 data-translate="lemavision-feature-2-title">Predictive Analytics</h4>
+                        <p data-translate="lemavision-feature-2-desc">
+                            AI predicts inventory needs before they become urgent.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h4 data-translate="lemavision-feature-3-title">Automated Tracking</h4>
+                        <p data-translate="lemavision-feature-3-desc">
+                            Track inventory automatically without manual counting.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section style="text-align: center; margin-top: var(--spacing-xxl); padding: var(--spacing-xl) 0;">
+                <h2 data-translate="coming-soon-meanwhile">In the Meantime</h2>
+                <p data-translate="coming-soon-explore">
+                    Explore our fully-featured solutions available today.
+                </p>
+                
+                <div class="action-buttons">
+                    <a href="../home.html">
+                        <button class="btn">← Back to Home</button>
+                    </a>
+                    <a href="mtonyoflow.html">
+                        <button class="btn">Explore MtonyoFlow</button>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+        </footer>
+        <script src="../javaScript/hamburger-menu.js"></script>
+        <script src="../javaScript/translations.js"></script>
+        <script src="../javaScript/language-toggle.js"></script>
+    </body>
+</html>

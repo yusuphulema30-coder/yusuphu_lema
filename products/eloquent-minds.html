@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        
+        <!-- Viewport for mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO & Social Meta Tags -->
+        <meta name="description" content="The Eloquent Minds - Professional public speaking and leadership development community. Learn from Yusuphu Awadhi Lema. Speak. Lead. Inspire.">
+        <meta name="author" content="Yusuphu Awadhi Lema">
+        <meta name="keywords" content="Eloquent Minds, Public Speaking, Leadership, Toastmasters, Tanzania, Dar es Salaam">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.lemanyx.com/eloquent-minds.html">
+        <meta property="og:title" content="The Eloquent Minds - Professional Leadership Community">
+        <meta property="og:description" content="Speak. Lead. Inspire.">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="image/Lemanyx_logo.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <!-- Page-Specific Styles - MOBILE FIRST -->
+        <style>
+            /* ============================================================================
+               ELOQUENT MINDS PAGE - MOBILE FIRST RESPONSIVE DESIGN
+               ============================================================================ */
+
+            /* Hero Section */
+            .eloquent-hero {
+                background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+                border-bottom: 2px solid rgba(255, 152, 0, 0.3);
+                padding: var(--spacing-lg) var(--spacing-md);
+                margin-bottom: var(--spacing-xl);
+                text-align: center;
+            }
+
+            .eloquent-hero h1 {
+                color: #ff9800;
+                font-size: clamp(2rem, 6vw, 3rem);
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .eloquent-hero .tagline {
+                color: var(--color-accent-cyan);
+                font-size: clamp(1rem, 3vw, 1.3rem);
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .eloquent-hero p {
+                color: var(--color-text-dim);
+                font-size: 0.95rem;
+                max-width: 600px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+
+            /* Main Content */
+            main {
+                max-width: var(--max-width-container);
+                margin: 0 auto;
+                padding: 0 var(--spacing-md);
+            }
+
+            /* Section Styling */
+            .eloquent-section {
+                padding: var(--spacing-lg) 0;
+                margin-bottom: var(--spacing-lg);
+                border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            }
+
+            .eloquent-section:last-child {
+                border-bottom: none;
+            }
+
+            .eloquent-section h2 {
+                color: #ff9800;
+                margin-bottom: var(--spacing-md);
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .eloquent-section h3 {
+                color: var(--color-text-white);
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-sm);
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+            }
+
+            .eloquent-section p {
+                color: var(--color-text-muted);
+                line-height: 1.8;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .eloquent-section ul {
+                margin-left: var(--spacing-lg);
+                margin-bottom: var(--spacing-md);
+            }
+
+            .eloquent-section li {
+                color: var(--color-text-muted);
+                margin-bottom: var(--spacing-md);
+                line-height: 1.8;
+            }
+
+            .eloquent-section strong {
+                color: #ff9800;
+            }
+
+            /* Highlight Box */
+            .eloquent-highlight {
+                background: rgba(255, 152, 0, 0.05);
+                border-left: 4px solid #ff9800;
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+                margin: var(--spacing-lg) 0;
+            }
+
+            .eloquent-highlight p {
+                margin-bottom: 0;
+            }
+
+            .eloquent-highlight strong {
+                display: block;
+                margin-bottom: var(--spacing-sm);
+            }
+
+            /* Core Pillars Grid */
+            .pillars-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin: var(--spacing-lg) 0;
+            }
+
+            .pillar-card {
+                background: rgba(255, 152, 0, 0.05);
+                border: 1px solid rgba(255, 152, 0, 0.2);
+                border-left: 4px solid #ff9800;
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius-sm);
+            }
+
+            .pillar-card h4 {
+                color: #ff9800;
+                margin-bottom: var(--spacing-sm);
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+
+            .pillar-card p {
+                margin-bottom: 0;
+                font-size: 0.95rem;
+            }
+
+            /* Meeting Format Section */
+            .meeting-format {
+                background: rgba(255, 152, 0, 0.05);
+                border: 1px solid rgba(255, 152, 0, 0.2);
+                padding: var(--spacing-lg);
+                border-radius: var(--border-radius);
+                margin: var(--spacing-lg) 0;
+            }
+
+            .meeting-format h4 {
+                color: #ff9800;
+                margin-bottom: var(--spacing-md);
+                font-size: 1.2rem;
+            }
+
+            .meeting-detail {
+                margin-bottom: var(--spacing-md);
+            }
+
+            .meeting-detail strong {
+                color: #ff9800;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .meeting-detail p {
+                margin: 0;
+                font-size: 0.95rem;
+            }
+
+            /* ============================================================================
+               BOOKS SECTION - MAIN FEATURE
+               ============================================================================ */
+
+            .books-section {
+                padding: var(--spacing-xl) 0;
+                margin: var(--spacing-xl) 0;
+                border-top: 2px solid rgba(255, 152, 0, 0.3);
+                border-bottom: 2px solid rgba(255, 152, 0, 0.3);
+            }
+
+            .books-section h2 {
+                text-align: center;
+                color: #ff9800;
+                margin-bottom: var(--spacing-xl);
+                font-size: clamp(1.8rem, 5vw, 2.5rem);
+            }
+
+            .books-intro {
+                text-align: center;
+                color: var(--color-text-muted);
+                margin-bottom: var(--spacing-xl);
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            /* Books Grid */
+            .books-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                margin-top: var(--spacing-xl);
+            }
+
+            .book-card {
+                background: rgba(255, 152, 0, 0.05);
+                border: 2px solid rgba(255, 152, 0, 0.2);
+                border-radius: var(--border-radius);
+                padding: var(--spacing-lg);
+                transition: all var(--transition-speed) ease;
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+
+            .book-card:hover {
+                background: rgba(255, 152, 0, 0.1);
+                border-color: rgba(255, 152, 0, 0.4);
+                transform: translateY(-4px);
+                box-shadow: 0 8px 25px rgba(255, 152, 0, 0.2);
+            }
+
+            .book-cover-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .book-cover {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                border-radius: var(--border-radius-sm);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                object-fit: cover;
+            }
+
+            .book-content {
+                text-align: center;
+            }
+
+            .book-title {
+                color: #ff9800;
+                font-size: 1.3rem;
+                font-weight: 600;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .book-description {
+                color: var(--color-text-muted);
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .book-button {
+                display: inline-block;
+                color: #ff9800;
+                border: 2px solid #ff9800;
+                padding: var(--spacing-sm) var(--spacing-md);
+                border-radius: var(--border-radius-sm);
+                text-decoration: none;
+                font-weight: 600;
+                transition: all var(--transition-speed) ease;
+                cursor: pointer;
+                background: transparent;
+            }
+
+            .book-button:hover {
+                background: #ff9800;
+                color: var(--color-primary-dark);
+            }
+
+            /* CTA Button */
+            .eloquent-cta {
+                text-align: center;
+                padding: var(--spacing-xl);
+                margin: var(--spacing-xl) 0;
+            }
+
+            .eloquent-cta h2 {
+                color: #ff9800;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .eloquent-cta p {
+                color: var(--color-text-muted);
+                margin-bottom: var(--spacing-lg);
+                line-height: 1.8;
+            }
+
+            .eloquent-cta-button {
+                display: inline-block;
+                background: linear-gradient(135deg, #ff9800, rgba(255, 152, 0, 0.7));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-xl);
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all var(--transition-speed) ease;
+                font-size: 1rem;
+            }
+
+            .eloquent-cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 30px rgba(255, 152, 0, 0.4);
+            }
+
+            /* Back Button */
+            .back-button {
+                display: inline-block;
+                margin-bottom: var(--spacing-xl);
+                margin-top: var(--spacing-xl);
+            }
+
+            .back-button .btn {
+                background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
+                color: var(--color-primary-dark);
+                padding: var(--spacing-md) var(--spacing-lg);
+                text-decoration: none;
+                border: none;
+                border-radius: var(--border-radius-sm);
+                font-weight: 600;
+                cursor: pointer;
+                transition: all var(--transition-speed) ease;
+            }
+
+            .back-button .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+            }
+
+            /* ============================================================================
+               TABLET (768px and up)
+               ============================================================================ */
+
+            @media (min-width: 768px) {
+                main {
+                    padding: 0 var(--spacing-lg);
+                }
+
+                .eloquent-hero {
+                    padding: var(--spacing-xl) var(--spacing-lg);
+                }
+
+                .eloquent-section {
+                    padding: var(--spacing-xl) 0;
+                    margin-bottom: var(--spacing-xl);
+                }
+
+                .pillars-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-xl);
+                }
+
+                .books-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-xl);
+                }
+
+                .book-card {
+                    flex-direction: column;
+                }
+
+                .eloquent-cta {
+                    padding: var(--spacing-xl);
+                }
+            }
+
+            /* ============================================================================
+               DESKTOP (1024px and up)
+               ============================================================================ */
+
+            @media (min-width: 1024px) {
+                main {
+                    padding: 0 var(--spacing-xl);
+                }
+
+                .eloquent-hero {
+                    padding: var(--spacing-xxl) var(--spacing-xl);
+                }
+
+                .eloquent-section {
+                    padding: var(--spacing-xxl) 0;
+                    margin-bottom: var(--spacing-xxl);
+                }
+
+                .pillars-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .books-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: var(--spacing-xl);
+                }
+
+                .books-section {
+                    padding: var(--spacing-xxl) 0;
+                    margin: var(--spacing-xxl) 0;
+                }
+
+                .books-section h2 {
+                    font-size: 2.5rem;
+                }
+
+                .eloquent-cta {
+                    padding: var(--spacing-xxl);
+                }
+            }
+
+            /* Accessibility */
+            .book-card:focus,
+            .eloquent-cta-button:focus {
+                outline: 2px solid #ff9800;
+                outline-offset: 2px;
+            }
+        </style>
+        
+        <title>Lemanyx Intelligence | The Eloquent Minds</title>
+    </head>
+
+    <body>
+        <!-- ============================================================
+             HEADER & NAVIGATION
+             ============================================================ -->
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="home.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="eloquent-minds.html" class="nav-active" data-translate="nav-eloquent">The Eloquent Mind</a></li>
+                        <li><a href="products/mtonyoflow.html" data-translate="nav-products">Products</a></li>
+                        <li><a href="contact.html" data-translate="nav-contact">Contact</a></li>
+                        <li><a href="request_demo.html" class="request-box" data-translate="nav-demo">Request Demo</a></li>
+                    </ul>
+                    
+                    <!-- LANGUAGE TOGGLE BUTTON -->
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+                        <span id="lang-text">Kiswahili</span>
+                    </button>
+                    
+                    <!-- Hamburger Menu (Mobile) -->
+                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                </div> 
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="eloquent-hero">
+                <h1 data-translate="eloquent-hero-title">THE ELOQUENT MINDS</h1>
+                <p class="tagline" data-translate="eloquent-hero-tagline">SPEAK. LEAD. INSPIRE.</p>
+                <p data-translate="eloquent-hero-subtitle">
+                    A professional public speaking and leadership development community 
+                    dedicated to empowering the next generation of visionary leaders.
+                </p>
+            </section>
+        </header>
+
+        <!-- ============================================================
+             MAIN CONTENT
+             ============================================================ -->
+        <main>
+            
+            <!-- WHAT IS THE ELOQUENT MINDS -->
+            <section class="eloquent-section">
+                <h2 data-translate="eloquent-what-is">What Is The Eloquent Minds?</h2>
+                
+                <p data-translate="eloquent-what-is-1">
+                    The Eloquent Minds is Yusuphu Awadhi Lema's initiative to empower the next generation of leaders 
+                    through the art of public speaking, leadership development, and executive presence.
+                </p>
+
+                <p data-translate="eloquent-what-is-2">
+                    Modeled after the Toastmasters International framework, The Eloquent Minds is a professional community 
+                    where members practice public speaking, develop leadership skills, and build confidence in high-pressure environments.
+                </p>
+
+                <p data-translate="eloquent-what-is-3">
+                    We believe that the best leaders are excellent communicators. The ability to articulate vision, inspire teams, 
+                    and navigate complex conversations is not innate—it is a craft that can be learned, practiced, and mastered.
+                </p>
+
+                <div class="eloquent-highlight">
+                    <strong data-translate="eloquent-difference">The Difference We Make:</strong>
+                    <p data-translate="eloquent-difference-text">
+                        Most leadership programs teach theory in a classroom. The Eloquent Minds teaches leadership in practice. 
+                        You learn by doing, by speaking, by failing safely, and by receiving real feedback from peers who understand 
+                        your goals.
+                    </p>
+                </div>
+            </section>
+
+            <!-- WHY THE ELOQUENT MINDS MATTERS -->
+            <section class="eloquent-section">
+                <h2 data-translate="eloquent-why">Why The Eloquent Minds Matters</h2>
+                
+                <h3 data-translate="eloquent-why-title-1">1. Most Leaders Never Learn to Speak</h3>
+                <p data-translate="eloquent-why-desc-1">
+                    In East Africa, we have brilliant technologists, entrepreneurs, and visionaries. 
+                    But many of them communicate their ideas poorly. A world-class idea communicated badly will fail. 
+                    The Eloquent Minds changes this.
+                </p>
+
+                <h3 data-translate="eloquent-why-title-2">2. Confidence is Competitive Advantage</h3>
+                <p data-translate="eloquent-why-desc-2">
+                    In business, fundraising, and public influence, the person who speaks with clarity and confidence often wins. 
+                    This is not about being loud or performative. It is about being clear, composed, and commanding.
+                </p>
+
+                <h3 data-translate="eloquent-why-title-3">3. Communication Shapes the World</h3>
+                <p data-translate="eloquent-why-desc-3">
+                    Every major movement—political, social, technological—is shaped by people who can speak. 
+                    If we want Tanzania and Africa to shape its own future, we need leaders who can articulate that future powerfully.
+                </p>
+
+                <h3 data-translate="eloquent-why-title-4">4. It's Part of Lemanyx Intelligence</h3>
+                <p data-translate="eloquent-why-desc-4">
+                    The Eloquent Minds is not separate from Lemanyx Intelligence. It IS Lemanyx Intelligence. 
+                    Our philosophy is simple: technology without communication fails. Solutions without advocates go unused. 
+                    Excellence without eloquence goes unnoticed.
+                </p>
+            </section>
+
+            <!-- CORE PILLARS -->
+            <section class="eloquent-section">
+                <h2 data-translate="eloquent-pillars">Our Three Pillars</h2>
+                <p data-translate="eloquent-pillars-intro">
+                    Every member of The Eloquent Minds develops excellence across three dimensions:
+                </p>
+
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <h4 data-translate="eloquent-pillar-1-title">1. Oratory</h4>
+                        <p data-translate="eloquent-pillar-1-desc">
+                            Master the techniques of powerful speaking: voice, pacing, pauses, body language, and persuasion. 
+                            Learn to captivate an audience and communicate complex ideas with clarity.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <h4 data-translate="eloquent-pillar-2-title">2. Leadership</h4>
+                        <p data-translate="eloquent-pillar-2-desc">
+                            Develop the vision, strategic thinking, and emotional intelligence that great leaders possess. 
+                            Learn to inspire teams, navigate crisis, and drive organizational excellence.
+                        </p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <h4 data-translate="eloquent-pillar-3-title">3. Executive Presence</h4>
+                        <p data-translate="eloquent-pillar-3-desc">
+                            Command respect in the boardroom. Develop the composure, professionalism, and gravitas 
+                            that separates leaders from managers.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MEETING FORMAT & STRUCTURE -->
+            <section class="eloquent-section">
+                <h2 data-translate="eloquent-meetings">How We Meet & Learn</h2>
+                
+                <div class="meeting-format">
+                    <h4 data-translate="eloquent-frequency">Frequency & Schedule</h4>
+                    
+                    <div class="meeting-detail">
+                        <strong data-translate="eloquent-schedule-label">When:</strong>
+                        <p data-translate="eloquent-schedule-time">Every 2 weeks • In-person + Online</p>
+                    </div>
+                    
+                    <div class="meeting-detail">
+                        <strong data-translate="eloquent-location-label">Where:</strong>
+                        <p data-translate="eloquent-location">Dar es Salaam, Tanzania (+ Virtual access)</p>
+                    </div>
+                    
+                    <div class="meeting-detail">
+                        <strong data-translate="eloquent-duration-label">Duration:</strong>
+                        <p data-translate="eloquent-duration">2-3 hours per session</p>
+                    </div>
+
+                    <div class="meeting-detail">
+                        <strong data-translate="eloquent-cost-label">Cost:</strong>
+                        <p data-translate="eloquent-cost">Affordable membership • First meeting FREE</p>
+                    </div>
+                </div>
+
+                <h3 data-translate="eloquent-session-format">What Happens in a Session</h3>
+                <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-lg);">
+                    <li data-translate="eloquent-session-1"><strong>Prepared Speeches:</strong> Members deliver 5-7 minute speeches on topics of their choice. Full feedback from the audience.</li>
+                    <li data-translate="eloquent-session-2"><strong>Impromptu Speaking:</strong> Practice thinking on your feet with 1-2 minute impromptu challenges.</li>
+                    <li data-translate="eloquent-session-3"><strong>Table Topics:</strong> Interactive discussions on leadership, communication, and current events.</li>
+                    <li data-translate="eloquent-session-4"><strong>Evaluations:</strong> Receive constructive, professional feedback on your delivery from experienced speakers.</li>
+                    <li data-translate="eloquent-session-5"><strong>Networking:</strong> Connect with other leaders, entrepreneurs, and professionals building their craft.</li>
+                </ul>
+            </section>
+
+            <!-- ============================================================
+                 BOOKS OF THE ELOQUENT MINDS SECTION - MAIN FEATURE
+                 ============================================================ -->
+            <section class="books-section">
+                <h2 data-translate="eloquent-books-title">📚 Books of The Eloquent Minds</h2>
+                
+                <p class="books-intro" data-translate="eloquent-books-intro">
+                    Comprehensive guides, resources, and curricula designed to support your journey to eloquence, leadership, 
+                    and professional excellence. Each book is carefully crafted to deepen your mastery of public speaking 
+                    and leadership development.
+                </p>
+
+                <div class="books-grid">
+
+                    <!-- ========================================================================
+                         BOOK 1 - Leadership Academy Curriculum
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-1.png" alt="Leadership Academy Curriculum" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Leadership Academy Curriculum</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 2 - Introduction to Public Speaking
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-2.png" alt="Introduction to Public Speaking" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Introduction to Public Speaking</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 3 - Member Orientation Handbook
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-3.png" alt="Member Orientation Handbook" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Member Orientation Handbook</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 4 - Speech Preparation Guide
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-4.png" alt="Speech Preparation Guide" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Speech Preparation Guide</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 5 - Eloquent Minds Meeting Structure
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-5.png" alt="Eloquent Minds Meeting Structure" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Eloquent Minds Meeting Structure</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 6 - Member Progression Framework
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-6.png" alt="Member Progression Framework" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Member Progression Framework</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 7 - Awards And Recognition System
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-7.png" alt="Awards And Recognition System" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Awards And Recognition System</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================================
+                         BOOK 8 - Mentorship Program
+                         ======================================================================== -->
+                    <div class="book-card">
+                        <div class="book-cover-container">
+                            <img src="image/eloquent-book-8.png" alt="Mentorship Program" class="book-cover">
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Mentorship Program</h3>
+                            <p class="book-description">
+                                <!-- ADD YOUR DESCRIPTION HERE -->
+                                [Description: Add your description for this book here - 2-3 sentences about what it covers and why it's valuable]
+                            </p>
+                            <a href="#" class="book-button">Learn More →</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Books Grid -->
+            </section>
+
+            <!-- CALL TO ACTION -->
+            <section class="eloquent-cta">
+                <h2 data-translate="eloquent-join-title">Ready to Become Eloquent?</h2>
+                <p data-translate="eloquent-join-subtitle">
+                    Join The Eloquent Minds and start your journey to speaking with confidence, leading with clarity, 
+                    and inspiring others with your vision.
+                </p>
+                <p data-translate="eloquent-first-free">Your first meeting is completely FREE. No commitment. No pressure.</p>
+                
+                <a href="contact.html" class="eloquent-cta-button" data-translate="eloquent-join-button">
+                    Get in Touch to Join →
+                </a>
+            </section>
+
+            <!-- Back Button -->
+            <div class="back-button">
+                <a href="home.html" class="btn">← Back to Home</a>
+            </div>
+
+        </main>
+
+        <!-- ============================================================
+             FOOTER
+             ============================================================ -->
+        <footer>
+            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+        </footer>
+
+        <!-- ============================================================
+             SCRIPTS
+             ============================================================ -->
+        <!-- Translation System -->
+        <script src="javaScript/translations.js"></script>
+        <script src="javaScript/language-toggle.js"></script>
+        
+        <!-- Form Validation -->
+        <script src="javaScript/form-validation.js"></script>
+
+        <!-- Hamburger Menu Handler -->
+        <script src="javaScript/hamburger-menu.js"></script>
+    </body>
+</html>
