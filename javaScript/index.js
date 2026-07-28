@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // GET API URL FROM ENVIRONMENT
     // ========================================================================
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+    window.API_URL = "https://api.lemanyx.com";
     const API_ENDPOINT = `${API_URL}/api/submit-application`;
     
     console.log('API Endpoint:', API_ENDPOINT);
