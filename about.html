@@ -11,9 +11,6 @@
         <meta name="description" content="About Lemanyx Intelligence - Learn our mission to solve Tanzanian problems through advanced technology, strategic thinking, and professional leadership.">
         <meta name="author" content="Yusuphu Awadhi Lema">
         
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="image/Lemanyx_logo.png">
-        
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/style.css">
         
@@ -133,13 +130,16 @@
                 font-size: 1rem;
                 margin-bottom: var(--spacing-md);
             }
-
+            .cental-philosophy{
+                text-align: center;
+            }
             /* Values Grid - mobile first */
             .values-container {
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: var(--spacing-lg);
                 margin-top: var(--spacing-lg);
+                
             }
 
             .value-item {
@@ -147,6 +147,10 @@
                 border-left: 4px solid var(--color-accent-cyan);
                 padding: var(--spacing-lg);
                 border-radius: var(--border-radius-sm);
+            }
+
+            .core-values{
+                background-color: rgba(0, 212, 255, 0.05);;
             }
 
             .value-item h4 {
@@ -166,6 +170,7 @@
                 border-radius: var(--border-radius);
                 padding: var(--spacing-lg);
                 margin-top: var(--spacing-lg);
+                
             }
 
             .ceo-box ul {
@@ -174,6 +179,42 @@
 
             .ceo-box li {
                 margin-bottom: var(--spacing-md);
+                color:  rgb(255, 255, 255);
+            }
+             ol{
+                margin-left: 70px;
+            }
+
+            .mission-and-vision{
+                display: flex;
+                gap: 20px;
+                text-align: center;
+                
+            }
+
+            .mission-and-vision-container{
+                border: 1px solid rgba(0, 212, 255, 0.2);
+                 background: rgba(0, 212, 255, 0.05);
+                border-radius: 5px;        
+                animation: moveUpDown 7s ease-in-out infinite;
+            }
+            
+            @keyframes moveUpDown{
+                0%{
+                    transform: translateY(0);
+                }
+                25%{
+                    transform: translateY(-25px);
+                }
+                50%{
+                    transform: translateY(-15px);
+                }
+                75%{
+                    transform: translateY(-22px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
             }
 
             /* TABLET (768px and up) - RESPONSIVE */
@@ -211,6 +252,7 @@
                 .values-container {
                     grid-template-columns: repeat(2, 1fr);
                     gap: var(--spacing-xl);
+                   background-color: rgba(3, 51, 60, 0.05);
                 }
 
                 .value-item {
@@ -224,26 +266,15 @@
 
             /* DESKTOP (1024px and up) */
             @media (min-width: 1024px) {
-                main {
-                    padding: 0 var(--spacing-xl);
-                }
-
-                .section {
-                    padding: var(--spacing-xxl) 0;
-                }
-
-                .section h2 {
-                    font-size: 2.2rem;
-                }
-
+                main {padding: 0 var(--spacing-xl);}
+                .section {padding: var(--spacing-xxl) 0;}
+                .section h2 {font-size: 2.2rem;}
                 /* Values Grid - 2 columns on desktop (or keep as is) */
-                .values-container {
-                    grid-template-columns: repeat(2, 1fr);
+                .values-container {grid-template-columns: repeat(2, 1fr);}
                 }
-            }
         </style>
         
-        <title>Lemanyx Intelligence | About</title>
+        <title>About</title>
     </head>
     
     <body>
@@ -254,15 +285,15 @@
             <nav class="navbar">
                 <div class="navdiv">
                     <!-- Logo -->
-                    <div class="logo">
-                        <img src="image/Lemanyx_logo.png" width="40px" height="40px" style="border-radius: 25px;">
+                    <div class="logo" >
+                        <img src="image/Lemanyx_logo.svg" alt="Logo for Lemanyx Intelligence, 
+                        featuring overlapping geometric letters forming a stylized marh above the brand name in blue and orange text" >
                         <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
                     </div>
-                    
                     <!-- Navigation Menu -->
                     <ul class="nav-menu">
                         <li><a href="home.html" data-translate="nav-home">Home</a></li>
-                        <li><a href="https://www.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
+                        <li><a href="https://www.mtonyoflow.lemanyx.com" data-translate="nav-solutions">Solutions</a></li>
                         <li><a href="about.html" class="present-nav-place" data-translate="nav-about">About</a></li>
                         <li><a href="carreers.html" data-translate="nav-careers">Careers</a></li>
                         <li><a href="contact.html" data-translate="nav-contact">Contact Us</a></li>
@@ -271,7 +302,7 @@
                     
                     <!-- LANGUAGE TOGGLE BUTTON -->
                     <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
-                        <span id="lang-text">Kiswahili</span>
+                        <span id="lang-text">SWAHILI</span>
                     </button>
                     
                     <!-- Hamburger Menu (Mobile) -->
@@ -291,68 +322,54 @@
             <section class="section executive-summary">
                 <h2 data-translate="about-executive-summary">Executive Summary</h2>
                 
-                <p data-translate="about-summary-new-1">
-                    Lemanyx Intelligence is not just a technology company.
-                </p>
-                
-                <p data-translate="about-summary-new-2">
-                    We are an ARCHITECTURE FOR SOLUTIONS—built by Tanzanians, for Tanzania.
+                <p data-translate="about-executive-summary-1">
+                    Lemanyx Intelligence is not just a technology company, 
+                    but it is an <em>Architecture for solutions</em> built for Tanzanian and by Tanzanians.
                 </p>
                 
                 <p data-translate="about-summary-new-3">
-                    Our mission is simple: solve Tanzanian problems in almost every sector through cutting-edge technology, strategic thinking, and professional leadership.
-                </p>
-                
-                <p data-translate="about-summary-new-4">
-                    <strong>But here's what makes us different: We don't just build software. We BUILD PEOPLE.</strong>
+                    Our mission is simple — solving Tanzanian problems in almost every sector through advanced technology, 
+                    strategic thinking, and professional leadership. And what makes us different is that; <em>"we don't just build software, but we also build people."</em>
                 </p>
                 
                 <p data-translate="about-summary-new-5">
-                    We understand that technology without professional leaders is incomplete. Data without strategic thinkers is wasted. Tools without excellent communicators cannot reach the people who need them most.
+                    At Lemanyx Intelligence, we understand that technology without professional leaders is incomplete,  
+                    data without strategic thinkers is wasted and  
+                    tools without excellent communicators cannot reach the people who need them most.
                 </p>
                 
                 <div class="three-pillars">
                     <p data-translate="about-summary-new-6">
-                        That's why Lemanyx Intelligence operates on THREE PILLARS:
+                        That's why Lemanyx Intelligence operates on three pillars:
                     </p>
                     
                     <ul style="margin-left: var(--spacing-lg);">
-                        <li data-translate="about-summary-new-7">ONE: TECHNOLOGY that solves real problems</li>
-                        <li data-translate="about-summary-new-8">TWO: STRATEGIES that create measurable impact</li>
-                        <li data-translate="about-summary-new-9">THREE: LEADERSHIP that communicates change</li>
+                        <li data-translate="about-summary-new-7">TECHNOLOGY  —  this solves real problems of Tanzanians.</li>
+                        <li data-translate="about-summary-new-8">STRATEGIES  —  this create measurable impact to Tanzanians.</li>
+                        <li data-translate="about-summary-new-9">LEADERSHIP  — this communicates changes within Tanzanians.</li>
                     </ul>
                 </div>
                 
-                <p data-translate="about-summary-new-10">
-                    Our scope is WIDE. Financial inclusion. Healthcare accessibility. Inventory intelligence. Business automation. And more.
-                </p>
-                
                 <p data-translate="about-summary-new-11">
-                    We solve these problems by combining three approaches: <strong>Technical precision</strong> (building systems that work) • <strong>Strategic insight</strong> (understanding what matters) • <strong>Leadership excellence</strong> (communicating the vision)
+                    We solve Tanzanian problems by combining three approaches: 
+                    <ol type="a">
+                        <li >Technical precision (building systems that work)</li>
+                        <li>Strategic insight(understanding what matters)</li>
+                        <li>Leadership excellence(communicating the vision)</li>
+                    </ol>
+                      
                 </p>
                 
                 <p style="margin-top: var(--spacing-lg);">
-                    <strong data-translate="about-summary-new-12">The Eloquent Minds is not a separate club. It IS Lemanyx Intelligence.</strong>
-                </p>
-                
-                <p data-translate="about-summary-new-13">
-                    Because the best solution in the world means NOTHING if nobody understands it, believes in it, or knows how to use it. We build professional speakers, strategic communicators, and visionary leaders alongside our technology.
-                </p>
-                
-                <p data-translate="about-summary-new-14">
-                    We are not launching everything at once. We plant roots DEEP. We build strong foundations. Then, when solutions are ready—truly ready—we introduce them to the world.
-                </p>
-                
-                <p style="margin-top: var(--spacing-lg);">
-                    <strong data-translate="about-summary-new-15">This is Lemanyx Intelligence: Architecture of Advanced Intelligence, built by Tanzanians, for Tanzania.</strong>
+                    This is Lemanyx Intelligence - <i>Architecture of Advanced Intelligence, built by Tanzanians, for Tanzania.</i>
                 </p>
             </section>
 
             <!-- ============================================================
                  FOUNDER'S NARRATIVE SECTION
                  ============================================================ -->
-            <section class="section">
-                <h2 data-translate="about-founder-narrative">The Founder's Narrative: The Pivot to Impact</h2>
+            <!--<section class="section">
+                <h2 data-translate="about-founder-narrative">The Founder's Narrative</h2>
                 
                 <p data-translate="about-founder-intro">
                     Every great tech company starts with a "Why." For Lemanyx Intelligence, that "Why" is the transformation of a medical dream into a digital reality.
@@ -370,47 +387,59 @@
                     By pivoting to Information Technology at IFM, Yusuphu Lema didn't abandon his goal to heal—he upgraded his tools. Lemanyx Intelligence is the culmination of this journey: applying the diagnostic rigor of medicine to the scalability of Artificial Intelligence.
                 </p>
             </section>
+            -->
 
             <!-- ============================================================
                  CORPORATE PHILOSOPHY SECTION
                  ============================================================ -->
             <section class="section">
                 <h2 data-translate="about-corporate-philosophy">Corporate Philosophy</h2>
-                
-                <!-- Vision Statement -->
-                <h3 data-translate="about-vision-title">Vision Statement</h3>
-                <p data-translate="about-vision-text">
-                    To architect a world where advanced intelligence is the heartbeat of human progress, making expert-level healthcare, visual perception, and seamless automation accessible to every corner of the globe.
-                </p>
+            
+                <div class="mission-and-vision">
+                    <!-- Vision Statement -->
+                    <div class="mission-and-vision-container">
+                        <h3 data-translate="about-vision-title" class="cental-philosophy">OUR VISION</h3>
+                        <p data-translate="about-vision-text">
+                            To architect a world where advanced intelligence is the heartbeat of human progress. 
+                            <!-- making expert-level healthcare, visual perception, and 
+                            seamless automation accessible to every corner of the globe. -->
+                        </p>
+                    </div>
 
-                <!-- Mission Statement -->
-                <h3 data-translate="about-mission-title">Mission Statement</h3>
-                <p data-translate="about-mission-text">
-                    To engineer high-precision systems that solve humanity's most complex challenges. By bridging the gap between clinical insight and technological innovation, we empower industries to see clearer, act smarter, and live healthier.
-                </p>
+                    <!-- Mission Statement -->
+                    <div class="mission-and-vision-container">
+                        <h3 data-translate="about-mission-title" class="cental-philosophy">OUR MISSION</h3>
+                        <p data-translate="about-mission-text">
+                            Solving Tanzanian problems in almost every sector through advanced technology, 
+                            strategic thinking, and professional leadership. 
+                        </p>
+                    </div>
+                </div>    
 
                 <!-- Core Values -->
-                <h3 data-translate="about-values-title">Core Values - The Lemanyx Intelligence Pillars</h3>
+                 <div class="core-values">
+                    <h3 data-translate="about-values-title" class="cental-philosophy">CORE VALUES</h3>
                 
-                <div class="values-container">
-                    <div class="value-item">
-                        <h4 data-translate="about-value-precision-title">Precision</h4>
-                        <p data-translate="about-value-precision">We believe in code that is as accurate as a surgeon's scalpel.</p>
-                    </div>
+                    <div class="values-container">
+                        <div class="value-item">
+                            <h4 data-translate="about-value-precision-title">Precision</h4>
+                            <p data-translate="about-value-precision">We believe in code that is as accurate as a surgeon's scalpel.</p>
+                        </div>
 
-                    <div class="value-item">
-                        <h4 data-translate="about-value-reliability-title">Reliability</h4>
-                        <p data-translate="about-value-reliability">In a world of "beta" software, Lemanyx delivers systems that stay up when it matters most.</p>
-                    </div>
+                        <div class="value-item">
+                            <h4 data-translate="about-value-reliability-title">Reliability</h4>
+                            <p data-translate="about-value-reliability">We deliver systems that stay up when it matters most.</p>
+                        </div>
 
-                    <div class="value-item">
-                        <h4 data-translate="about-value-empathy-title">Empathy</h4>
-                        <p data-translate="about-value-empathy">We build for people. Our AI is designed to enhance human life, not replace it.</p>
-                    </div>
+                        <div class="value-item">
+                            <h4 data-translate="about-value-empathy-title">Empathy</h4>
+                            <p data-translate="about-value-empathy">We build for people. Our solutions are designed to enhance human life and not replace it.</p>
+                        </div>
 
-                    <div class="value-item">
-                        <h4 data-translate="about-value-vision-title">Visionary Logic</h4>
-                        <p data-translate="about-value-vision">We look at data and see the future patterns that others miss.</p>
+                        <div class="value-item">
+                            <h4 data-translate="about-value-vision-title">Visionary Logic</h4>
+                            <p data-translate="about-value-vision">We look at data and see the future patterns that others miss.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -419,22 +448,22 @@
                  CEO COMMITMENT SECTION
                  ============================================================ -->
             <section class="section">
-                <h2 data-translate="about-ceo-commitment">The CEO Commitment</h2>
+                <h2 data-translate="about-ceo-commitment">OUR COMMITMENT</h2>
                 
                 <p data-translate="about-ceo-text">
-                    At Lemanyx, our leadership operates under a strict "Promptness & Reliability" protocol. We understand that in the 2026 tech economy, speed is the new currency.
+                    At Lemanyx, our leadership operates under a strict <em>"Promptness & Reliability</em>" protocol. 
+                    We understand that in the 2026 tech economy, speed is the new currency.<br>Therefore:
                 </p>
                 
                 <div class="ceo-box">
                     <ul>
-                        <li>
-                            <strong data-translate="about-response-standard">The 3-Hour Response Standard:</strong>
-                            <span data-translate="about-response-standard-desc">We acknowledge all global inquiries within a 3-hour window.</span>
+                        <li data-translate="about-response-standard-desc">
+                            We acknowledge all global inquiries within a 3-hour window.
                         </li>
                         
-                        <li>
-                            <strong data-translate="about-build-public">Build in Public:</strong>
-                            <span data-translate="about-build-public-desc">We maintain transparency in our R&D, showing our partners the progress from the first line of code to the final deployment.</span>
+                        <li data-translate="about-build-public-desc">
+                            We maintain transparency in our R&D, 
+                            showing our partners the progress from the first line of code to the final deployment.
                         </li>
                     </ul>
                 </div>
@@ -445,15 +474,18 @@
              FOOTER
              ============================================================ -->
         <footer>
-            <p data-translate="footer-copyright">© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
+            <p>© 2026 ● Lemanyx Intelligence ● Dar es Salaam</p>
         </footer>
 
         <!-- ============================================================
              SCRIPTS
              ============================================================ -->
-        <!-- Translation System -->
-        <script src="javaScript/translations.js"></script>
-        <script src="javaScript/language-toggle.js"></script>
+        <!-- Translation System 
+          <script src="javaScript/translations.js"></script>
+          <script src="javaScript/language-toggle.js"></script>
+        -->
+        
+       
         
         <!-- Form Validation -->
         <script src="javaScript/form_validation.js"></script>

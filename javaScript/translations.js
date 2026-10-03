@@ -273,7 +273,7 @@ const translations = {
 },
 
 'about-summary-new-2': {
-    'en': 'We are an ARCHITECTURE FOR SOLUTIONS — built by Tanzanians, for Tanzania.',
+    'en': 'We are an ARCHITECTURE FOR SOLUTIONSbuilt by Tanzanians, for Tanzania.',
     'sw': 'Sisi ni sulihisho lenye mpangilio — iliyotengenezwa na Watanzania, kwa Tanzania.'
 },
 
@@ -1651,7 +1651,7 @@ function translatePage(language) {
     // Update toggle button text
     const toggleBtn = document.getElementById('lang-text');
     if (toggleBtn) {
-        toggleBtn.textContent = language === 'en' ? 'Kiswahili' : 'English';
+        toggleBtn.textContent = language === 'en' ? 'SWAHILI' : 'ENGLISH';
     }
     
     // Save language preference to browser storage
