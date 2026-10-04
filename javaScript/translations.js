@@ -11,8 +11,8 @@ const translations = {
     // ========================================================================
     
     'navbar-brand': {
-        'en': 'Lemanyx Intelligence',
-        'sw': 'Lemanyx Intelligence'
+        'en': 'Lemanyx',
+        'sw': 'Lemanyx'
     },
     
     'nav-home': {
