@@ -1431,16 +1431,6 @@ const translations = {
     'sw': 'KARIBU'
 },
 
-'home-title-1': {
-    'en': 'LEMANYX',
-    'sw': 'LEMANYX'
-},
-
-'home-title-2': {
-    'en': 'INTELLIGENCE',
-    'sw': 'INTELLIGENCE'
-},
-
 'home-tagline': {
     'en': 'Intelligence. Innovation. Impact.',
     'sw': 'Akili. Ubunifu. Athari.'

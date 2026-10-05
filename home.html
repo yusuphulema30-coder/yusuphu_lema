@@ -11,7 +11,7 @@
         <meta name="google-site-verification" content="oioEt9bkpByp9afMxVsBU-IlCNrhRB_W0HU8G0-QB1c"/>
         
         <!-- SEO & Social Meta Tags -->
-        <meta name="description" content="Lemanyx Intelligence - Technology and business solutions company transforming how businesses operate. Welcome to LEMANIC INTELLIGENCE.">
+        <meta name="description" content="Lemanyx Intelligence - Technology and business solutions company transforming how businesses operate. Welcome to LEMANYX INTELLIGENCE.">
         <meta name="author" content="Yusuphu Awadhi Lema">
         <meta name="keywords" content="Lemanyx Intelligence, MtonyoFlow, LemaVision, AfyaLema, Tanzania, Technology Solutions">
         <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
         <!-- Favicon -->
         
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css?v=3">
         
         <!-- Page-Specific Styles - MOBILE FIRST -->
         <style>
@@ -37,58 +37,57 @@
                 display: flex;
                 grid-template-columns: 1fr;
                 gap: var(--spacing-lg);
-                align-items: center;
+                
             }
 
-            .hero-image {
-                order: -1;
-                text-align: center;
-            }
 
-            .hero-image img {
+    
+
+            /*MOCK-UP LANGUAGE*/    
+            .phone-frame{
                 width: 100%;
-                max-width: 400px;
-                height: auto;
-                border-radius: var(--border-radius);
-                border: 2px solid var(--color-accent-cyan);
-                box-shadow: 0 8px 30px rgba(0, 212, 255, 0.2);
+                height:520px;
+                overflow: hidden;
+                max-width: 300px;
+                overflow: hidden;
+                border-radius: 36px;
+                border: 7px solid #0b0b1a;
+                flex-shrink: 0;
+                box-shadow: 0 0 30px rgba(0, 200, 255, 0.35);
             }
-
-            .hero-founder-title {
-                text-align: center;
-                margin-top: var(--spacing-md);
-                color: var(--color-text-dim);
-                font-size: 0.8rem;
-                letter-spacing: 2px;
-            }
-            .hero-founder-title-name{
-                box-shadow: 0px 0px 10px cyan;
-                box-sizing: border-box;
-                width: 295px;
-                margin-top: 0px;
-
-            }
-            .hero-founder-name {
-                text-align: center;
-                color: var(--color-accent-cyan);
-                font-size: 1.2rem;
-                font-style: italic;
-                margin-top: var(--spacing-sm);
+            .phone-frame img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+                display: block;
             }
 
             /* Hero Content - Welcome Section */
             .hero-content h1 {
                 color: var(--color-text-white);
-                font-size: clamp(1.5rem, 6vw, 2.5rem);
+                font-size: clamp(1.75rem, 6vw, 3.5rem);
                 margin-bottom: var(--spacing-sm);
-                line-height: 1.2;
+                line-height: 1.1;
             }
-
+            .hero-tagline{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                text-align: center;
+            }
+            .hero-tagline::before, .hero-tagline::after{
+                content: "";
+                flex: 1;
+                height: 1px;
+                background-color: rgba(0, 200, 255, 0.6);
+            }
             .hero-content h1 .highlight {
                 color: var(--color-accent-cyan);
             }
 
             .hero-subtitle {
+                margin-top: 10%;
                 color: var(--color-text-dim);
                 font-size: clamp(0.9rem, 3vw, 1rem);
                 margin-bottom: var(--spacing-lg);
@@ -373,6 +372,7 @@
                 font-size: 0.95rem;
             }
 
+
             /* ============================================================================
                TABLET (768px and up)
                ============================================================================ */
@@ -383,14 +383,6 @@
                     padding: var(--spacing-xl) var(--spacing-lg);
                     grid-template-columns: 1fr 1fr;
                     gap: var(--spacing-xl);
-                }
-
-                .hero-image {
-                    order: 0;
-                }
-
-                .hero-image img {
-                    max-width: 100%;
                 }
 
                 /* Cards Section - 2 Columns */
@@ -484,9 +476,23 @@
                 outline: 2px solid var(--color-accent-cyan);
                 outline-offset: 2px;
             }
+            /* ============================================================================
+               ALL PHONES (768px and up)
+               ============================================================================ */
+               @media(max-width: 768px){
+                    .hero-section{
+                        flex-direction: column-reverse;
+                    }
+                    .phone-frame{
+                        width: 240px;
+                        height: 400px;
+                        margin: 0 auto;
+                        flex-shrink: 0;
+                    }
+               }
         </style>
         
-        <title>Home</title>
+        <title>Lemanyx Intelligence | Technology Solutions for Africa</title>
     </head>
 
     <body>
@@ -499,7 +505,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <img src="image/Lemanyx_logo.svg" alt="Logo for Lemanyx Intelligence, 
-                        featuring overlapping geometric letters forming a stylized marh above the brand name in blue and orange text">
+                        featuring overlapping geometric letters forming a stylized mark above the brand name in blue and orange text">
                         <a href="home.html">Lemanyx</a>
                     </div>
                     
@@ -529,34 +535,25 @@
              ============================================================ -->
         <main>
             
-            <!-- HERO SECTION - Founder Welcome -->
+            <!-- HERO SECTION  Welcome -->
             <section>
-                <!-- Founder Image (Left on Desktop, Top on Mobile) -->
-                 <div class="hero-section">
-                <div class="hero-image">
-                    <img src="image/Yusuphu_Lema.jpeg" alt="Yusuphu Awadhi Lema - Founder & CEO" class="founder-image">
-                    <div class="hero-founder-title-name">
-                        <p class="hero-founder-name">Yusuphu Awadhi Lema</p>
-                        <p class="hero-founder-title">FOUNDER & CEO</p>
+                <div class="hero-section">
+                    <div class="phone-frame">
+                        <img src="image/mtonyoflow-phone.png" alt="MtonyoFLow dashboard on phone">
                     </div>
-                </div>
-
-                <div>
+                    
                     <!-- Welcome Content (Right on Desktop, Bottom on Mobile) -->
                     <div class="hero-content">
                         <p class="hero-subtitle" data-translate="home-welcome">WELCOME TO</p>
                         <h1>
-                            <span data-translate="home-title-1">LEMANYX</span><br>
-                            <span class="highlight" data-translate="home-title-2">INTELLIGENCE</span>
+                            <span>LEMANYX</span>
+                            <span class="highlight">INTELLIGENCE</span>
                         </h1>
-                    
-                        <p class="hero-subtitle" >Architecture of Advanced Intelligence</p>
-                    
+                        <p class="hero-tagline">Architecture of Advanced Intelligence</p>
                         <p data-translate="home-intro-1">
                             Lemanyx Intelligence is a technology and business solutions company on a mission to transform 
                             how businesses operate, decisions are made, and value is delivered.
                         </p>
-
                         <p data-translate="home-intro-2">
                             We build intelligent systems, scalable software, and data-driven solutions that empower organizations 
                             to grow, adapt, and lead in an ever-evolving digital world.
@@ -564,7 +561,10 @@
                     </div>
                 </div>
                 </div>
-                        <!-- Mission Statement -->
+            </section>
+
+            <section>
+                <!-- Mission Statement -->
                 <div class="mission-statement">
                     <h3>⊙ <span data-translate="home-mission-label">Our Mission</span></h3>
                     <p data-translate="home-mission-text">

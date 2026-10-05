@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * If no saved preference, detect browser's language
      * navigator.language returns things like 'en-US', 'sw-TZ', 'en'
-     * We only need the first part before the hyphen
      */
     if (!savedLanguage) {
         const browserLanguage = navigator.language.split('-')[0];
