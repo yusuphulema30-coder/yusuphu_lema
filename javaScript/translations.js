@@ -643,14 +643,10 @@ const translations = {
     
     'contact-instagram-desc': {
         'en': 'Follow us for company updates and insights',
-        'sw': 'Fuata tukumbuke habari za kampuni na maarifa'
+        'sw': 'Tufuatilie ili eweze pata habari za kampuni na maarifa mbalimbali'
     },
     
-    'contact-instagram-handle': {
-        'en': '@yusuphulema',
-        'sw': '@yusuphulema'
-    },
-    
+
     'contact-whatsapp-title': {
         'en': 'WhatsApp',
         'sw': 'WhatsApp'
@@ -687,12 +683,12 @@ const translations = {
     
     'demo-page-title': {
         'en': 'Request Demo',
-        'sw': 'Omba Kwa'
+        'sw': 'Omba Demo'
     },
     
     'demo-hero-title': {
         'en': 'Request a Demo',
-        'sw': 'Omba Kwa'
+        'sw': 'Omba Demo'
     },
     
     'demo-hero-subtitle': {
@@ -786,7 +782,7 @@ const translations = {
 
 'demo-hero-title': {
     'en': 'Request a Demo',
-    'sw': 'Omba Kwa'
+    'sw': 'Omba Demo'
 },
 
 'demo-hero-subtitle': {
@@ -876,7 +872,7 @@ const translations = {
 
 'demo-submit-btn': {
     'en': 'Schedule Demo',
-    'sw': 'Panga Kwa'
+    'sw': 'Wasilisha Maombi'
 },
 
 'demo-expect-title': {

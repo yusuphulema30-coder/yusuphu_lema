@@ -4,66 +4,39 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.lemanyx.com/</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+        <lastmod>2026-10-06</lastmod>
     </url>
 
     <!-- Main Pages -->
-    <url>
-        <loc>https://www.lemanyx.com/home.html</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
 
     <url>
         <loc>https://www.lemanyx.com/about.html</loc>
         <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.lemanyx.com/carreers.html</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-10-06</lastmod>
     </url>
 
     <url>
         <loc>https://www.lemanyx.com/contact.html</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2026-10-06</lastmod>
     </url>
 
     <url>
         <loc>https://www.lemanyx.com/request_demo.html</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <lastmod>2026-10-06</lastmod>
     </url>
 
     <!-- Product Pages -->
     <url>
         <loc>https://mtonyoflow.lemanyx.com</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <lastmod>2026-10-06</lastmod>
     </url>
 
     <url>
         <loc>https://www.lemanyx.com/products/eloquent-minds.html</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.lemanyx.com/products/mtonyoflow.html</loc>
-        <lastmod>2026-10-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <lastmod>2026-10-06</lastmod>
     </url>
 </urlset>

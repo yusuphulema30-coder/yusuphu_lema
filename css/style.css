@@ -56,7 +56,14 @@ body {
     color: var(--color-text-white);
     line-height: 1.6;
 }
-
+.language-toggle{
+    background-color: navy;
+    border: 1px solid cyan;
+    padding: 5px;
+    border-radius: 5px;
+    color: #f4eeee;
+    font-weight: 300;
+}
 /* ============================================================================
    3. TYPOGRAPHY
    ============================================================================ */
