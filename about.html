@@ -95,9 +95,11 @@
             .executive-summary {
                 background: rgba(0, 212, 255, 0.05);
                 border-left: 4px solid var(--color-accent-cyan);
+                
                 padding: var(--spacing-lg);
                 border-radius: var(--border-radius-sm);
                 margin-bottom: var(--spacing-xl);
+
             }
 
             .executive-summary p {
@@ -133,7 +135,7 @@
                 font-size: 1rem;
                 margin-bottom: var(--spacing-md);
             }
-            .cental-philosophy{
+            .central-philosophy{
                 text-align: center;
             }
             /* Values Grid - mobile first */
@@ -184,12 +186,13 @@
                 margin-bottom: var(--spacing-md);
                 color:  rgb(255, 255, 255);
             }
-             ol{
-                margin-left: 70px;
+             .executive-summary ol{
+                margin-left: var(--spacing-lg);
             }
 
             .mission-and-vision{
                 display: flex;
+                flex-direction: column;
                 gap: 20px;
                 text-align: center;
                 
@@ -265,19 +268,24 @@
                 .ceo-box {
                     padding: var(--spacing-xl);
                 }
+                .mission-and-vision{
+                    display: flex;
+                    flex-direction: row;
+                }
             }
 
             /* DESKTOP (1024px and up) */
             @media (min-width: 1024px) {
                 main {padding: 0 var(--spacing-xl);}
                 .section {padding: var(--spacing-xxl) 0;}
+                .section.executive-summary {padding: var(--spacing-xxl) var(--spacing-xl);}
                 .section h2 {font-size: 2.2rem;}
                 /* Values Grid - 2 columns on desktop (or keep as is) */
                 .values-container {grid-template-columns: repeat(2, 1fr);}
                 }
         </style>
         
-        <title>About</title>
+        <title>About Us | Lemanyx Intelligence</title>
     </head>
     
     <body>
@@ -290,7 +298,7 @@
                     <!-- Logo -->
                     <div class="logo" >
                         <img src="image/Lemanyx_logo.svg" alt="Logo for Lemanyx Intelligence, 
-                        featuring overlapping geometric letters forming a stylized marh above the brand name in blue and orange text" >
+                        featuring overlapping geometric letters forming a stylized mark above the brand name in blue and orange text" >
                         <a href="home.html" data-translate="navbar-brand">Lemanyx Intelligence</a>
                     </div>
                     <!-- Navigation Menu -->
@@ -348,21 +356,20 @@
                     
                     <ul style="margin-left: var(--spacing-lg);">
                         <li data-translate="about-summary-new-7">TECHNOLOGY  —  this solves real problems of Tanzanians.</li>
-                        <li data-translate="about-summary-new-8">STRATEGIES  —  this create measurable impact to Tanzanians.</li>
+                        <li data-translate="about-summary-new-8">STRATEGIES  —  this creates measurable impact to Tanzanians.</li>
                         <li data-translate="about-summary-new-9">LEADERSHIP  — this communicates changes within Tanzanians.</li>
                     </ul>
                 </div>
                 
                 <p data-translate="about-summary-new-11">
-                    We solve Tanzanian problems by combining three approaches: 
+                    We solve Tanzanian problems by combining three approaches: </p>
+            
                     <ol type="a">
                         <li >Technical precision (building systems that work)</li>
-                        <li>Strategic insight(understanding what matters)</li>
-                        <li>Leadership excellence(communicating the vision)</li>
+                        <li>Strategic insight (understanding what matters)</li>
+                        <li>Leadership excellence (communicating the vision)</li>
                     </ol>
-                      
-                </p>
-                
+
                 <p style="margin-top: var(--spacing-lg);">
                     This is Lemanyx Intelligence - <i>Architecture of Advanced Intelligence, built by Tanzanians, for Tanzania.</i>
                 </p>
@@ -401,7 +408,7 @@
                 <div class="mission-and-vision">
                     <!-- Vision Statement -->
                     <div class="mission-and-vision-container">
-                        <h3 data-translate="about-vision-title" class="cental-philosophy">OUR VISION</h3>
+                        <h3 data-translate="about-vision-title" class="central-philosophy">OUR VISION</h3>
                         <p data-translate="about-vision-text">
                             To architect a world where advanced intelligence is the heartbeat of human progress. 
                             <!-- making expert-level healthcare, visual perception, and 
@@ -411,7 +418,7 @@
 
                     <!-- Mission Statement -->
                     <div class="mission-and-vision-container">
-                        <h3 data-translate="about-mission-title" class="cental-philosophy">OUR MISSION</h3>
+                        <h3 data-translate="about-mission-title" class="central-philosophy">OUR MISSION</h3>
                         <p data-translate="about-mission-text">
                             Solving Tanzanian problems in almost every sector through advanced technology, 
                             strategic thinking, and professional leadership. 
@@ -421,7 +428,7 @@
 
                 <!-- Core Values -->
                  <div class="core-values">
-                    <h3 data-translate="about-values-title" class="cental-philosophy">CORE VALUES</h3>
+                    <h3 data-translate="about-values-title" class="central-philosophy">CORE VALUES</h3>
                 
                     <div class="values-container">
                         <div class="value-item">
