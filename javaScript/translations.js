@@ -100,8 +100,8 @@ const translations = {
 },
 
 'contact-instagram-handle': {
-    'en': '@yusuphulema',
-    'sw': '@yusuphulema'
+    'en': '@lemanyxintelligence',
+    'sw': '@lemanyxintelligence'
 },
 
 'contact-whatsapp-title': {
