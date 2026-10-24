@@ -51,10 +51,7 @@ CORS(app, resources={
     r"/api/*": {
         "origins": [
             "https://www.lemanyx.com",
-            "https://lemanyx.com",
-            "http://localhost:3000",
-            "http://localhost:8000",
-            "http://127.0.0.1:3000"
+            "https://lemanyx.com"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
