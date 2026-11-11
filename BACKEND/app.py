@@ -51,7 +51,10 @@ CORS(app, resources={
     r"/api/*": {
         "origins": [
             "https://www.lemanyx.com",
-            "https://lemanyx.com"
+            "https://lemanyx.com",
+            #"http://127.0.0.1:5000",
+            #"http://localhost:5000",
+            #"null"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
@@ -63,18 +66,15 @@ CORS(app, resources={
 # ============================================================================
 
 # Initialize Supabase
-"""
-Supabase is a database service built on PostgreSQL.
-It provides secure data storage in the cloud.
-"""
+
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Initialize SendGrid
 """
-SendGrid sends emails on your behalf.
-You use their API to send transactional emails (confirmations, notifications).
+SendGrid sends emails on our behalf.
+We use their API to send transactional emails (confirmations, notifications).
 """
 sg = SendGridAPIClient(os.getenv("SENDGRID_API_KEY"))
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
@@ -384,15 +384,18 @@ def submit_application():
             return jsonify({'status': 'error', 'message': 'No data provided'}), 400
         
         is_valid, error_msg = validate_application_data(data)
+
         if not is_valid:
             print(f"❌ Validation failed: {error_msg}")
             return jsonify({'status': 'error', 'message': error_msg}), 400
         
         saved = save_application_to_database(data)
+
         if not saved:
             return jsonify({'status': 'error', 'message': 'Failed to save application'}), 500
         
         send_application_confirmation_email(data['fullname'], data['email'], data['role'])
+
         send_admin_notification_email(data, 'application')
         
         return jsonify({
@@ -403,6 +406,7 @@ def submit_application():
     except Exception as e:
         print(f"❌ Error: {str(e)}")
         return jsonify({'status': 'error', 'message': 'Server error. Please try again later.'}), 500
+
 
 @app.route('/api/submit-demo-request', methods=['POST'])
 def submit_demo_request():
