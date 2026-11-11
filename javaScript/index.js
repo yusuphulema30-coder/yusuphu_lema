@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // GET API URL FROM ENVIRONMENT
     // ========================================================================
-    window.API_URL = "https://www.lemanyx.com";
+    window.API_URL = "https://lemanyx-backend.onrender.com";
     const API_ENDPOINT = `${API_URL}/api/submit-application`;
     
     console.log('API Endpoint:', API_ENDPOINT);
