@@ -17,19 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // GET API URL FROM ENVIRONMENT
     // ========================================================================
-    window.API_URL = "https://api.lemanyx.com";
+    window.API_URL = "https://www.lemanyx.com";
     const API_ENDPOINT = `${API_URL}/api/submit-application`;
     
     console.log('API Endpoint:', API_ENDPOINT);
 
-    // OPEN FORM
+    // OPEN FORM FOR ONLINE APPLICATION
     if (applyBtn && formBox) {
         applyBtn.addEventListener("click", function(e) {
             e.preventDefault();
             formBox.hidden = false;
             setTimeout(() => {
                 formBox.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 100);
+            }, 10);
+            formBox.style.display = "block";
             console.log('✅ Form is now visible');
         });
     }
@@ -38,7 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeBtn && formBox) {
         closeBtn.addEventListener("click", function(e) {
             e.preventDefault();
-            formBox.hidden = true;
+            formBox.style.display="none";
+            formBox.hidden =true;
+            window.scrollTo({
+                    top: 150,
+                    behavior: "smooth"
+                });
             console.log('✅ Form is now hidden');
         });
     }
@@ -90,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     alert('✅ Application submitted successfully!');
                     careersForm.reset();
-                    formBox.hidden = true;
+                    formBox.hidden = false;
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
                     alert('❌ Error: ' + (data.message || 'Failed to submit'));
